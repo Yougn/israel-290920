@@ -1,0 +1,70 @@
+.video {
+  margin-bottom: 100px;
+
+  @media (min-width: 320px) and (max-width: 600px) {
+    margin-bottom: 75px;
+  }
+}
+
+.video__title {
+  @include list-reset;
+  padding-bottom: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 30px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $blue;
+
+  @media (min-width: 320px) and (max-width: 600px) {
+    padding-bottom: 21px;
+    font-size: 32px;
+    line-height: 39px;
+  }
+}
+
+.video__description {
+  max-width: 690px;
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 29px;
+  text-align: center;
+  color: $black;
+
+  @media (min-width: 551px) and (max-width: 768px) {
+    max-width: 500px;
+    text-align: center;
+  }
+
+  @media (min-width: 320px) and (max-width: 500px) {
+    max-width: 288px;
+    margin-bottom: -44px;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: left;
+  }
+}
+
+.video__box {
+  position: relative;
+}
+
+.video__btn {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 107px;
+  height: 101px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  zoom: 1;
+
+  @media (min-width: 320px) and (max-width: 500px) {
+    top: 66%;
+    zoom: 0.8;
+  }
+}

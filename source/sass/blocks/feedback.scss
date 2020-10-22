@@ -1,0 +1,158 @@
+.feedback {
+  position: relative;
+  margin-bottom: 322px;
+
+  @media (min-width: 451px) and (max-width: 700px) {
+    margin-bottom: 500px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 450px) {
+    margin-bottom: 390px;
+  }
+}
+
+.feedback::after {
+  content: '';
+  position: absolute;
+  width: 167px;
+  height: 226px;
+  left: 0;
+  top: -76px;
+  background-image: url("../img/backpack.jpg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  transform: rotate(0deg);
+  z-index: -1;
+
+  @media (min-width: $mobile-width) and (max-width: 700px) {
+    top: -49px;
+    background-image: url("../img/backpack-mob.jpg");
+  }
+}
+
+.feedback__container {
+  max-width: 1165px;
+  margin: 0 auto;
+  margin-left: 200px;
+
+  @media (min-width: $mobile-width) and (max-width: 700px) {
+    margin-left: 0;
+  }
+}
+
+.feedback__wrapper {
+  padding-left: 10px;
+
+  @media (min-width: $mobile-width) and (max-width: 700px) {
+    padding: 0;
+  }
+}
+
+.feedback__title {
+  margin: 0;
+  padding-bottom: 23px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: left;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $blue;
+
+  @media (min-width: $mobile-width) and (max-width: 700px) {
+    margin: 0 auto;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 1.2px;
+  }
+}
+
+.feedback__description {
+  margin: 0;
+  max-width: 400px;
+  padding-bottom: 64px;
+  font-size: 17px;
+  line-height: 29px;
+  text-align: left;
+  color: $black;
+  opacity: 0.87;
+
+  @media (min-width: $mobile-width) and (max-width: 700px) {
+    margin: 0 auto;
+    max-width: 286px;
+    padding-bottom: 25px;
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.feedback__form {
+  display: flex;
+  align-items: flex-start;
+
+  @media (min-width: $mobile-width) and (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.feedback__form input {
+  height: 59px;
+  width: 310px;
+  padding: 20px 40px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 20px;
+  font-variant: small-caps;
+  border: 2px solid #E3E3E3;
+  border-radius: 80px;
+  color: $black;
+  opacity: 0.87;
+  cursor: pointer;
+
+  &::placeholder {
+    letter-spacing: -1px;
+    color: rgba($black, 0.5);
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 700px) {
+    width: 287px;
+    margin-bottom: 7px;
+    font-size: 17px;
+    line-height: 20px;
+    font-variant: small-caps;
+  }
+}
+
+.feedback__btn {
+  padding: 19px 40px;
+  margin-left: -50px;
+  z-index: 1;
+
+  @media (min-width: $mobile-width) and (max-width: 700px) {
+    align-self: center;
+    margin-left: 0;
+    padding: 20px 65px;
+  }
+}
+
+.feedback__box {
+  position: relative;
+}
+
+.feedback__picture img {
+  position: absolute;
+  right: 0;
+  bottom: -131px;
+  z-index: -1;
+
+  @media (min-width: 451px) and (max-width: 670px) {
+    bottom: -450px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 450px) {
+    bottom: -307px;
+  }
+}

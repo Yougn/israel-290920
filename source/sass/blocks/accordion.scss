@@ -1,0 +1,249 @@
+.accordion {
+  position: relative;
+  margin-bottom: 253px;
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    margin-bottom: 235px;
+  }
+}
+
+.accordion::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -103px;
+  width: 194px;
+  height: 177px;
+  background-image: url("../img/bag.png");
+  background-color: transparent;
+  background-repeat: no-repeat;
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    bottom: 65px;
+  }
+}
+
+.accordion__container {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding-left: 110px;
+
+  @media (min-width: $mobile-width) and (max-width: 1300px) {
+    padding-left: 0;
+  }
+}
+
+.accordion__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 560px;
+
+  @media (min-width: 601px) and (max-width: 1300px) {
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 290px;
+  }
+}
+
+.accordion__title {
+  margin: 0;
+  padding-bottom: 32px;
+  font-size: 40px;
+  line-height: 49px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-align: left;
+  text-transform: uppercase;
+  color: $blue;
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    max-width: 200px;
+    margin: 0 auto;
+    padding-bottom: 22px;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    letter-spacing: 3.5px;
+  }
+}
+
+.accordion__box {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  padding-top: 23px;
+  padding-bottom: 25px;
+  position: relative;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: left;
+  color: $black;
+  border: none;
+  background-color: $white;
+  transition: 0.5s;
+  outline: none;
+  cursor: pointer;
+
+  &--organizer {
+    padding-top: 0;
+  }
+
+  &--grant {
+    padding-bottom: 20px;
+  }
+
+  &--prise {
+    padding-top: 25px;
+  }
+
+  &--aboutgrant {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  &--masa {
+    padding-top: 28px;
+    padding-right: 95px;
+    padding-bottom: 19px;
+  }
+
+  &--registration {
+    padding-top: 30px;
+    padding-right: 165px;
+    padding-bottom: 18px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    align-items: baseline;
+    max-width: 265px;
+    font-size: 16px;
+    line-height: 26px;
+
+    &--organizer  {
+      padding-bottom: 17px;
+    }
+
+    &--grant  {
+      padding-bottom: 16px;
+    }
+
+    &--masa {
+      padding-top: 20px;
+      padding-right: 0;
+      padding-bottom: 16px;
+    }
+
+    &--aboutgrant {
+      padding-top: 23px;
+      padding-bottom: 17px;
+    }
+
+    &--registration {
+      padding-top: 22px;
+      padding-right: 55px
+    }
+  }
+}
+
+.accordion__box:after {
+  position: absolute;
+  content: '';
+  top: 24px;
+  right: 34px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/arrow-down.svg");
+  background-repeat: no-repeat;
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    right: -27px;
+  }
+}
+
+.accordion__box--grant:after {
+  top: 45px;
+}
+
+.accordion__box--prise:after {
+  top: 37px;
+}
+
+.accordion__box--aboutgrant:after {
+  top: 53px;
+}
+
+.accordion__box--masa:after {
+  top: 45px;
+}
+
+.accordion__box--registration:after {
+  top: 50px;
+}
+
+.active:after {
+  background-image: url("../img/arrow-down.svg");
+  transform: rotate(-180deg);
+}
+
+.accordion__question {
+  padding-right: 14px;
+  font-size: 28px;
+  line-height: 48px;
+  font-weight: bold;
+  color: #ffd506;
+
+  &--organizer {
+    padding-right: 16px;
+  }
+
+  &--registration,
+  &--masa {
+    padding-bottom: 15px;
+  }
+}
+
+.panel {
+  margin: 0;
+  width: 560px;
+  max-height: 0;
+  padding-right: 40px;
+  text-align: left;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-bottom: 1px solid rgba($black, 0.2);
+
+  @media (min-width: $mobile-width) and (max-width: 600px) {
+    width: 290px;
+    padding-right: 22px;
+  }
+}
+
+.panel p {
+  margin-top: -4px;
+  color: $black;
+  opacity: 0.74;
+}
+
+.accordion__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 645px;
+  height: 803px;
+  background-image: url("../img/accordion.jpg");
+  background-color: #e5e5e5;
+  z-index: -1;
+
+  @media (min-width: $mobile-width) and (max-width: 1300px) {
+    display: none;
+  }
+}

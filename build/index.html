@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Израйль</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/FiraSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill.js" async=""></script>
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+
+    <div class="page-header__container">
+      <nav class="page-header__nav">
+        <a class="page-header__tel" href="tel:+(972)2–621–6581">+ (972) 2 – 621 – 6581</a>
+        <a class="page-header__logo">
+          <picture>
+            <!-- 1х: 767px; -->
+            <source media="(min-width: 767px)" srcset="img/logo.svg">
+            <!-- 1х: 320px; -->
+            <img src="img/logo-mobile.svg" alt="Логотип Израйль">
+          </picture>
+        </a>
+        <button class="page-header__btn request-call" type="button">ЗАКАЗАТЬ ЗВОНОК</button>
+      </nav>
+    </div>
+
+  </header>
+
+  <main class="page-main">
+
+    <div class="main-header">
+      <div class="main-header__row">
+        <h1 class="main-header__title">
+          Учёба, путешествие и карьера
+          для еврейской молодёжи
+        </h1>
+      </div>
+    </div>
+
+    <section class="video">
+      <h2 class="video__title">О ПРОГРАММЕ</h2>
+      <p class="video__description">
+        «Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут.
+        Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле.
+        В течение освоения программ предусмотрен грант от 4200 до 8400$.
+      </p>
+      <div class="video__box">
+        <picture class="video__picture">
+          <!-- 1х: 500px; -->
+          <source media="(min-width: 500px)" srcset="img/people-video.png">
+          <!-- 1х: 320px; -->
+          <img src="img/people-video-mobile.png" alt="Видео о программе">
+        </picture>
+        <button class="video__btn" type="button" aria-label="Кнопка просмотреть видео">
+          <svg class="video__play" width="96" height="96">
+            <use href="img/sprite.svg#icon-play"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <div class="tabs" id="tabs">
+      <div class="tabs__container">
+        <h2 class="tabs__title">ПРОГРАММЫ</h2>
+        <div class="tabs__wrapper">
+          <div class="tabs-nav">
+            <div class="tabs-nav__item tabs-nav__item--all" data-tab-name="tab-1">
+              Общие
+            </div>
+            <div class="tabs-nav__item tabs-nav__item--academic is-active" data-tab-name="tab-2">
+              Академические
+            </div>
+            <div class="tabs-nav__item tabs-nav__item--practiсe" data-tab-name="tab-3">
+              Стажировки
+            </div>
+            <div class="tabs-nav__item tabs-nav__item--volounter" data-tab-name="tab-4">
+              Волонтерство
+            </div>
+            <div class="tabs-nav__item tabs-nav__item--religion" data-tab-name="tab-5">
+              Религиозные
+            </div>
+          </div>
+          <div class="tabs__content">
+            <div class="tab tab-1">
+              <div class="tabs__cover">
+                <h3 class="tabs__subtitle">Общие</h3>
+                <p class="tabs__text tabs__text--top">
+                  Провести семестр или год за рубежом, знакомясь с различными культурами<br> и идеями, традициями и
+                  стилем
+                  жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также
+                  академический центр, живая лаборатория идей и творческого исследования.
+                </p>
+                <p class="tabs__text tabs__text--bottom">
+                  Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной
+                  религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+                  изучить все это в удивительной университетской среде.
+                </p>
+              </div>
+            </div>
+            <div class="tab is-active tab-2">
+              <div class="tabs__cover">
+                <h3 class="tabs__subtitle">Академические</h3>
+                <p class="tabs__text tabs__text--top">
+                  Провести семестр или год за рубежом, знакомясь с различными культурами<br> и идеями, традициями и
+                  стилем
+                  жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также
+                  академический центр, живая лаборатория идей и творческого исследования.
+                </p>
+                <p class="tabs__text tabs__text--bottom">
+                  Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной
+                  религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+                  изучить все это в удивительной университетской среде.
+                </p>
+              </div>
+            </div>
+            <div class="tab tab-3">
+              <div class="tabs__cover">
+                <h3 class="tabs__subtitle">Стажировка</h3>
+                <p class="tabs__text tabs__text--top">
+                  Провести семестр или год за рубежом, знакомясь с различными культурами<br> и идеями, традициями и
+                  стилем
+                  жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также
+                  академический центр, живая лаборатория идей и творческого исследования.
+                </p>
+                <p class="tabs__text tabs__text--bottom">
+                  Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной
+                  религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+                  изучить все это в удивительной университетской среде.
+                </p>
+              </div>
+            </div>
+            <div class="tab tab-4">
+              <div class="tabs__cover">
+                <h3 class="tabs__subtitle">Волонтерство</h3>
+                <p class="tabs__text tabs__text--top">
+                  Провести семестр или год за рубежом, знакомясь с различными культурами<br> и идеями, традициями и
+                  стилем
+                  жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также
+                  академический центр, живая лаборатория идей и творческого исследования.
+                </p>
+                <p class="tabs__text tabs__text--bottom">
+                  Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной
+                  религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+                  изучить все это в удивительной университетской среде.
+                </p>
+              </div>
+            </div>
+            <div class="tab tab-5">
+              <div class="tabs__cover">
+                <h3 class="tabs__subtitle">Религиозные</h3>
+                <p class="tabs__text tabs__text--top">
+                  Провести семестр или год за рубежом, знакомясь с различными культурами<br> и идеями, традициями и
+                  стилем
+                  жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также
+                  академический центр, живая лаборатория идей и творческого исследования.
+                </p>
+                <p class="tabs__text tabs__text--bottom">
+                  Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной
+                  религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+                  изучить все это в удивительной университетской среде.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="feedback">
+      <div class="feedback__container">
+        <div class="feedback__wrapper">
+          <h2 class="feedback__title">ХОЧУ ПОЕХАТЬ!</h2>
+          <p class="feedback__description">
+            Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
+          </p>
+          <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+            <label for="telephone"></label>
+            <input type="tel" name="telephone" id="telephone" placeholder="ТЕЛЕФОН" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
+            <button class="btn feedback__btn call-me" type="submit" aria-label="Перезвоните мне">
+              Перезвоните мне
+            </button>
+          </form>
+        </div>
+        <div class="feedback__box">
+          <picture class="feedback__picture">
+            <!-- 1х: 350px; -->
+            <source media="(min-width: 350px)" srcset="img/girl-flag-bg.jpg">
+            <!-- 1х: 320px; -->
+            <img src="img/girl-flag-bg-mob.jpg" alt="Девушка с флагом">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="criteria">
+      <div class="criteria__container">
+        <div class="criteria__box">
+          <div class="criteria__picture"></div>
+        </div>
+        <div class="criteria__wrapper">
+          <h2 class="criteria__title">КАК ПОЕХАТЬ</h2>
+          <p class="criteria__description">
+            Чтобы узнать подробнее о программе, свяжитесь с координатором в вашем городе.
+            Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.
+          </p>
+          <p class="criteria__subtitle">Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы
+            должны:
+          </p>
+          <ul class="criteria__list">
+            <li class="criteria__item criteria__item--age">
+              <span>1</span>
+              Быть в возрасте от 16 до 30 лет
+            </li>
+            <li class="criteria__item criteria__item--education">
+              <span>2</span>
+              Иметь оконченное среднее образование
+            </li>
+            <li class="criteria__item criteria__item--origin">
+              <span>3</span>
+              Иметь документально подтверждённые еврейские
+              корни и пройти консульскую проверку
+            </li>
+            <li class="criteria__item criteria__item--travel">
+              <span>4</span>
+              За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.
+            </li>
+          </ul>
+          <p class="criteria__mark">Если вы не подходите по этим правилам, вы всё равно можете
+            принять участие в программе «Маса», оплатив её полную стоимость.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="swiper">
+      <h2 class="swiper__title">ЖИЗНЬ<br> В ИЗРАИЛЕ</h2>
+      <p class="swiper__description">
+        Помимо учёбы, в рамках программе у вас будет возможность путешествовать по стране и
+        познакомиться с богатой культурно-исторической жизнью Израиля и его жителей.
+      </p>
+      <div class="swiper-container" data-mobile="false">
+        <div class="swiper-wrapper">
+          <div class="swiper-card swiper-card--one"></div>
+          <div class="swiper-card swiper-card--two"></div>
+          <div class="swiper-card swiper-card--three"></div>
+          <div class="swiper-card swiper-card--four"></div>
+          <div class="swiper-card swiper-card--five"></div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <section class="foto">
+      <div class="foto__container">
+        <div class="foto__bg">
+          <div class="foto__wrapper">
+            <h2 class="foto__title">#masaisrael</h2>
+            <p class="foto__description">
+              Познакомьтесь с программой<br> от первого лица! Многие участники ведут блоги и фотодневники о жизни,
+              учёбе и путешествиях в Израиле.
+            </p>
+            <button class="btn foto__btn" type="button">
+              <svg class="foto__btn-svg" width="24" height="24">
+                <use href="img/sprite.svg#icon-inst"></use>
+              </svg>
+              СМОТРЕТЬ ФОТО
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="accordion">
+      <div class="accordion__container">
+        <div class="accordion__wrapper">
+          <h2 class="accordion__title">ЧАСТЫЕ ВОПРОСЫ</h2>
+          <button class="accordion__box accordion__box--organizer">
+            <span class="accordion__question accordion__question--organizer">1</span>
+            Кто организатор? Какие сроки у программы?
+          </button>
+          <div class="panel">
+            <p>Полная стоимость определяется организаторами в зависимости от
+              направления. В большинстве случаев грант «Маса» не покрывает
+              полную стоимость программы, и поэтому предусматривается
+              определённая доля личного участия.
+            </p>
+          </div>
+          <button class="accordion__box accordion__box--grant">
+            <span class="accordion__question accordion__question--grant">2</span>
+            Что такое грант на обучение?
+          </button>
+          <div class="panel">
+            <p>Полная стоимость определяется организаторами в зависимости от
+              направления. В большинстве случаев грант «Маса» не покрывает
+              полную стоимость программы, и поэтому предусматривается
+              определённая доля личного участия.
+            </p>
+          </div>
+          <button class="accordion__box accordion__box--prise">
+            <span class="accordion__question accordion__question--prise">3</span>
+            Как определяется стоимость программы?
+          </button>
+          <div class="panel">
+            <p>Полная стоимость определяется организаторами в зависимости от
+              направления. В большинстве случаев грант «Маса» не покрывает
+              полную стоимость программы, и поэтому предусматривается
+              определённая доля личного участия.
+            </p>
+          </div>
+          <button class="accordion__box accordion__box--aboutgrant">
+            <span class="accordion__question accordion__question--aboutgrant">4</span>
+            Что такое грант на обучение?
+          </button>
+          <div class="panel">
+            <p>Полная стоимость определяется организаторами в зависимости от
+              направления. В большинстве случаев грант «Маса» не покрывает
+              полную стоимость программы, и поэтому предусматривается
+              определённая доля личного участия.
+            </p>
+          </div>
+          <button class="accordion__box accordion__box--masa">
+            <span class="accordion__question accordion__question--masa">5</span>
+            Признается ли учеба в рамках проекта для дальнейшего обучения?
+          </button>
+          <div class="panel">
+            <p>Полная стоимость определяется организаторами в зависимости от
+              направления. В большинстве случаев грант «Маса» не покрывает
+              полную стоимость программы, и поэтому предусматривается
+              определённая доля личного участия.
+            </p>
+          </div>
+          <button class="accordion__box accordion__box--registration">
+            <span class="accordion__question accordion__question--registration">6</span>
+            Как выглядит полный процесс регистрации на программу "Маса"?
+          </button>
+          <div class="panel">
+            <p>Полная стоимость определяется организаторами в зависимости от
+              направления. В большинстве случаев грант «Маса» не покрывает
+              полную стоимость программы, и поэтому предусматривается
+              определённая доля личного участия.
+            </p>
+          </div>
+          <div class="accordion__image"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slider">
+      <div class="slider-container">
+        <h2 class="slider__title">ОТЗЫВЫ</h2>
+        <div class="slider-wrap">
+          <div class="slide">
+            <div class="slide__row">
+              <picture>
+                <!-- 1х: 768px; -->
+                <source media="(min-width: 768px)" srcset="img/girl.jpg">
+                <!-- 1х: 320px; -->
+                <img src="img/girl-mob.jpg" alt="Отзыв от Ольги!">
+              </picture>
+              <div class="slide__column">
+                <h3 class="slide__subtitle">Ольга Михайлова</h3>
+                <p class="slide__program"><span class="slide__mark">Программа:</span>
+                  Арт-Тель, февраль-сетнябрь 2017
+                </p>
+                <p class="slide__text slide__text--top">
+                  Долго выбирая программу, на которую ехать - я определилась,
+                  взяла на 5 месяцев
+                  «иврит как культура». Мне очень повезло оказаться в надежных и заботливых
+                  руках Анны, Юлии и Олега.
+                </p>
+                <p class="slide__text slide__text--bottom">
+                  С первой же встречи тебе дают понять - что ты не один, у тебя есть практически
+                  круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое
+                  удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки
+                  всей программой в разные уголки страны.
+                </p>
+                <a class="slide__link" href="#">Читать подробнее</a>
+                <ul class="slide__social-list">
+                  <li class="slide__item slide__item--facebook">
+                    <a class="slide__link slide__link--facebook" href="#">
+                      <span class="visually-hidden">Мы в Фейсбуке</span>
+                      <svg class="slide__svg slide__svg--fb" width="24" height="24">
+                        <use href="img/sprite.svg#icon-fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="slide__item slide__item--twitter">
+                    <a class="slide__link slide__link--twitter" href="#">
+                      <span class="visually-hidden">Мы в Твиттере</span>
+                      <svg class="slide__svg slide__svg--twitter" width="24" height="24">
+                        <use href="img/sprite.svg#icon-tw"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="slide__item slide__item--insta">
+                    <a class="slide__link slide__link--insta" href="#">
+                      <span class="visually-hidden">Мы в Инстаграм</span>
+                      <svg class="slide__svg slide__svg--insta" width="24" height="24">
+                        <use href="img/sprite.svg#icon-insta"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide__row">
+              <picture>
+                <!-- 1х: 768px; -->
+                <source media="(min-width: 768px)" srcset="img/girl.jpg">
+                <!-- 1х: 320px; -->
+                <img src="img/girl-mob.jpg" alt="Отзыв от Ольги!">
+              </picture>
+              <div class="slide__column">
+                <h3 class="slide__subtitle">Ольга Михайлова</h3>
+                <p class="slide__program"><span class="slide__mark">Программа:</span>
+                  Арт-Тель, февраль-сетнябрь 2017
+                </p>
+                <p class="slide__text slide__text--top">
+                  Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев
+                  «иврит как культура». Мне очень повезло оказаться в надежных и заботливых
+                  руках Анны, Юлии и Олега.
+                </p>
+                <p class="slide__text slide__text--bottom">
+                  С первой же встречи тебе дают понять - что ты не один, у тебя есть практически
+                  круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое
+                  удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки
+                  всей программой в разные уголки страны.
+                </p>
+                <a class="slide__link" href="#">Читать подробнее</a>
+                <ul class="slide__social-list">
+                  <li class="slide__item slide__item--facebook">
+                    <a class="slide__link slide__link--facebook" href="#">
+                      <span class="visually-hidden">Мы в Фейсбуке</span>
+                      <svg class="slide__svg slide__svg--fb" width="24" height="24">
+                        <use href="img/sprite.svg#icon-fb"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="slide__item slide__item--twitter">
+                    <a class="slide__link slide__link--twitter" href="#">
+                      <span class="visually-hidden">Мы в Твиттере</span>
+                      <svg class="slide__svg slide__svg--twitter" width="24" height="24">
+                        <use href="img/sprite.svg#icon-tw"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="slide__item slide__item--insta">
+                    <a class="slide__link slide__link--insta" href="#">
+                      <span class="visually-hidden">Мы в Инстаграм</span>
+                      <svg class="slide__svg slide__svg--insta" width="24" height="24">
+                        <use href="img/sprite.svg#icon-insta"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <section class="details">
+      <div class="details__container">
+        <div class="details__wrapper">
+          <h2 class="details__title">Узнать подробности</h2>
+          <p class="details__city">Ваш город:<strong>новосибирск</strong></p>
+          <div class="details__wrap">
+            <img src="img/curator.png" width="112" height="112" alt="Куратор">
+            <div class="details__column">
+              <p class="details__curator"><span>Ваш куратор:</span>Анна Горелик</p>
+              <p class="details__place">
+                Новосибирск, ул. Щетинкина 68,
+                культурный центр «Бейт Менахем»
+              </p>
+              <ul class="details__social-list">
+                <li class="details__item details__item--facebook">
+                  <a class="details__link details__link--facebook" href="#">
+                    <span class="visually-hidden">Я в Фейсбуке</span>
+                    <svg class="details__svg details__svg--fb" width="24" height="24">
+                      <use href="img/sprite.svg#icon-fb"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="details__item details__item--wts">
+                  <a class="details__link details__link--wts" href="#">
+                    <span class="visually-hidden">Я в Вотсапе</span>
+                    <svg class="details__svg details__svg--wts" width="24" height="24">
+                      <use href="img/sprite.svg#icon-wts"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="details__item details__item--teleg">
+                  <a class="details__link details__link--teleg" href="#">
+                    <span class="visually-hidden">Я в Телеграме</span>
+                    <svg class="details__svg details__svg--teleg" width="24" height="24">
+                      <use href="img/sprite.svg#icon-teleg"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="details__description">
+            Куратор является опытным специалистом агентства Сохнут
+            и знает о проекте «Маса» всё! Свяжитесь с куратором,<br>
+            узнайте подробнее о программах и выберите свою !
+          </p>
+        </div>
+        <div class="details__box">
+          <div class="details__map"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="contacts__container">
+        <div class="contacts__wrapper">
+          <div class="contacts__column">
+            <h3 class="contacts__title">
+              Оставьте ваши контакты, если у вас
+              остались вопросы — мы на них ответим!
+            </h3>
+            <p class="contacts__description">
+              Мы не передаём данные третьим лицам. Ваши данные
+              будут в безопасности и вам не придёт спам от нас!
+            </p>
+          </div>
+          <form class="contacts__form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="contacts__name">
+              <label for="name"></label>
+              <input type="text" name="name" id="name" placeholder="ИМЯ" required="">
+            </div>
+            <div class="contacts__tel">
+              <label for="phone"></label>
+              <input type="tel" name="telephone" id="phone" placeholder="+7 (923) 41" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
+            </div>
+            <button class="btn contacts__btn call-me" type="submit" aria-label="Кнопка оправить заказ">
+              ПЕРЕЗВОНИТЕ МНЕ
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <div class="page-footer__wrapper">
+
+        <a class="page-footer__logo"><img src="img/logo-footer.svg" width="85" height="27" alt="Логотип Израйль"></a>
+
+        <a class="page-footer__copyright" href="#">
+          <p>Copyright someDesignCompany ©2019</p>
+        </a>
+
+        <ul class="page-footer__list">
+          <li class="page-footer__item page-footer__item--facebook">
+            <a class="page-footer__link page-footer__link--facebook" href="#">
+              <span class="visually-hidden">Мы в Фейсбуке</span>
+              <svg class="page-footer__svg page-footer__svg--fb" width="24" height="24">
+                <use href="img/sprite.svg#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__item page-footer__item--twitter">
+            <a class="page-footer__link page-footer__link--twitter" href="#">
+              <span class="visually-hidden">Мы в Твиттере</span>
+              <svg class="page-footer__svg page-footer__svg--twitter" width="24" height="24">
+                <use href="img/sprite.svg#icon-tw"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="page-footer__item page-footer__item--insta">
+            <a class="page-footer__link page-footer__link--insta" href="#">
+              <span class="visually-hidden">Мы в Инстаграм</span>
+              <svg class="page-footer__svg page-footer__svg--insta" width="24" height="24">
+                <use href="img/sprite.svg#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <section class="application">
+    <div class="application__form">
+      <div class="application__wrapper">
+        <img src="img/checkmark.svg" width="64" height="64">
+        <p class="application__title">Заявка принята</p>
+        <p class="application__text">
+          Мы приняли ваши данные и вскоре мы
+          перезвоним вам для уточнения деталей!
+        </p>
+        <button class="btn application__btn" type="submit">ПОНЯТНО</button>
+        <button class="application__btn-close" type="button">
+          <span class="visually-hidden">
+            Закрыть окно
+          </span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="order">
+    <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="order__wrap">
+        <p class="order__title">Заказать звонок</p>
+        <p class="order__text">
+          Оставьте ваши контактные данные,<br> мы свяжемся
+          с вами в течение рабочего дня и обязательно
+          поможем найти ответ на ваш вопрос!
+        </p>
+        <ul class="order__list">
+          <li class="order__item order__item--name">
+            <label for="name"></label>
+            <input type="text" name="name" id="name" placeholder="ИМЯ" required="">
+          </li>
+          <li class="order__item order__item--tel">
+            <label for="phone"></label>
+            <input type="tel" name="telephone" id="phone" placeholder="ТЕЛЕФОН" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
+          </li>
+        </ul>
+        <button class="btn order__btn" type="submit">ПЕРЕЗВОНИТЕ МНЕ</button>
+        <p class="order__checkbox">
+          <input class="order__checkbox-input visually-hidden" type="checkbox" name="agreement" id="agreement" value="Согласие">
+          <label for="agreement"></label>
+          Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+        </p>
+        <button type="button" class="order__btn-close"><span class="visually-hidden"> Закрыть окно</span></button>
+      </div>
+    </form>
+  </section>
+
+  <script src="js/script.js"></script>
+  <script src="js/tabs.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/accordion.js"></script>
+</body>
+
+</html>

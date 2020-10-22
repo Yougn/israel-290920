@@ -1,0 +1,107 @@
+.application {
+  display: none;
+
+  &--show {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($white, 0.5);
+    z-index: 3;
+  }
+}
+
+.application__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 480px;
+  min-height: 521px;
+  background-color: $white;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  border-radius: 8px;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    width: 320px;
+    min-height: 768px;
+  }
+}
+
+.application__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.application__wrapper img {
+  padding-top: 120px;
+  padding-bottom: 40px;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    padding-top: 200px;
+    padding-bottom: 37px;
+  }
+}
+
+.application__title {
+  @include list-reset;
+  padding-bottom: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 1.2px;
+  color: $blue;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 1px;
+  }
+}
+
+.application__text {
+  @include list-reset;
+  max-width: 360px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: center;
+  color: $black;
+  opacity: 0.87;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    max-width: 290px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.application__btn {
+  padding: 20px 93px;
+}
+
+.application__btn-close {
+  position: absolute;
+  top: 35px;
+  right: 29px;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/cross.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
+    top: 22px;
+    right: 22px;
+  }
+}

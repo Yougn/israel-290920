@@ -1,0 +1,152 @@
+.tabs-nav {
+	display: flex;
+  flex-direction: column;
+  width: 230px;
+  margin-right: 60px;
+  padding-top: 10px;
+
+  @media (min-width: 320px) and (max-width: 960px) {
+    width: 100%;
+    flex-direction: row;
+    margin-right: 0;
+    margin-left: 20px;
+    padding-top: 18px;
+    overflow: auto;
+  }
+}
+
+.tabs-nav__item {
+  position: relative;
+  padding: 23px 20px 23px 71px;
+  margin-bottom: 7px;
+	font-size: 15px;
+  line-height: 18px;
+  text-align: left;
+  color: $black;
+  opacity: 0.87;
+  cursor: pointer;
+
+  @media (min-width: $mobile-width) and (max-width: 679px) {
+    padding: 11px 11px 11px 51px;
+  }
+}
+
+.tabs-nav__item--all::before {
+  position: absolute;
+  content:"";
+  top: 18px;
+  left: 23px;
+  width: 28px;
+  height: 33px;
+  background-image: url("../img/star.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  @media (min-width: $mobile-width) and (max-width: 679px) {
+    top: 5px;
+    left: 10px;
+  }
+}
+
+.is-active.tabs-nav__item--all::before {
+  background-image: url("../img/star_w.png");
+}
+
+.tabs-nav__item--academic::before {
+  position: absolute;
+  content:"";
+  top: 17px;
+  left: 20px;
+  width: 36px;
+  height: 35px;
+  background-image: url("../img/hat.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  @media (min-width: $mobile-width) and (max-width: 679px) {
+    top: 5px;
+    left: 10px;
+  }
+}
+
+.is-active.tabs-nav__item--academic::before {
+  background-image: url("../img/hat_w.png");
+}
+
+.tabs-nav__item--practiсe::before {
+  position: absolute;
+  content:"";
+  top: 18px;
+  left: 20px;
+  width: 32px;
+  height: 25px;
+  background-image: url("../img/portf.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  @media (min-width: $mobile-width) and (max-width: 679px) {
+    top: 5px;
+    left: 10px;
+  }
+}
+
+.is-active.tabs-nav__item--practiсe::before {
+  background-image: url("../img/portf_w.png");
+}
+
+.tabs-nav__item--volounter::before {
+  position: absolute;
+  content:"";
+  top: 18px;
+  left: 20px;
+  width: 32px;
+  height: 29px;
+  background-image: url("../img/hand.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  @media (min-width: $mobile-width) and (max-width: 679px) {
+    top: 5px;
+    left: 10px;
+  }
+}
+
+.is-active.tabs-nav__item--volounter::before {
+  background-image: url("../img/hand_w.png");
+}
+
+.tabs-nav__item--religion::before {
+  position: absolute;
+  content:"";
+  top: 22px;
+  left: 24px;
+  width: 23px;
+  height: 25px;
+  background-image: url("../img/candle.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  @media (min-width: $mobile-width) and (max-width: 679px) {
+    top: 5px;
+    left: 10px;
+  }
+}
+
+.is-active.tabs-nav__item--religion::before {
+  background-image: url("../img/candle_w.png");
+}
+
+.tabs-nav__item.is-active {
+  line-height: 23px;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: $white;
+  clip-path: polygon(0 0,86% 0,100% 52%,86% 100%,0 100%);
+  background: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+
+  @media (min-width: $mobile-width) and (max-width: 679px) {
+    clip-path: none;
+    border-radius: 50px;
+  }
+}
