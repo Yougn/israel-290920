@@ -12,8 +12,8 @@
 }
 
 .feedback::after {
-  content: '';
   position: absolute;
+  content: "";
   width: 167px;
   height: 226px;
   left: 0;
@@ -49,7 +49,7 @@
 }
 
 .feedback__title {
-  margin: 0;
+  @include list-reset;
   padding-bottom: 23px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -70,7 +70,7 @@
 }
 
 .feedback__description {
-  margin: 0;
+  @include list-reset;
   max-width: 400px;
   padding-bottom: 64px;
   font-size: 17px;
@@ -106,7 +106,7 @@
   font-weight: 500;
   line-height: 20px;
   font-variant: small-caps;
-  border: 2px solid #E3E3E3;
+  border: 2px solid $bg-color;
   border-radius: 80px;
   color: $black;
   opacity: 0.87;
@@ -115,6 +115,15 @@
   &::placeholder {
     letter-spacing: -1px;
     color: rgba($black, 0.5);
+  }
+
+  &:focus,
+  &:hover {
+    border: 2px solid $yellow;
+  }
+
+  &:active {
+    border: 2px solid $black;
   }
 
   @media (min-width: $mobile-width) and (max-width: 700px) {

@@ -1,11 +1,11 @@
 .tabs-nav {
-	display: flex;
+  display: flex;
   flex-direction: column;
   width: 230px;
   margin-right: 60px;
   padding-top: 10px;
 
-  @media (min-width: 320px) and (max-width: 960px) {
+  @media (min-width: $mobile-width) and (max-width: 960px) {
     width: 100%;
     flex-direction: row;
     margin-right: 0;
@@ -19,7 +19,7 @@
   position: relative;
   padding: 23px 20px 23px 71px;
   margin-bottom: 7px;
-	font-size: 15px;
+  font-size: 15px;
   line-height: 18px;
   text-align: left;
   color: $black;
@@ -33,7 +33,7 @@
 
 .tabs-nav__item--all::before {
   position: absolute;
-  content:"";
+  content: "";
   top: 18px;
   left: 23px;
   width: 28px;
@@ -54,7 +54,7 @@
 
 .tabs-nav__item--academic::before {
   position: absolute;
-  content:"";
+  content: "";
   top: 17px;
   left: 20px;
   width: 36px;
@@ -75,7 +75,7 @@
 
 .tabs-nav__item--practiсe::before {
   position: absolute;
-  content:"";
+  content: "";
   top: 18px;
   left: 20px;
   width: 32px;
@@ -96,7 +96,7 @@
 
 .tabs-nav__item--volounter::before {
   position: absolute;
-  content:"";
+  content: "";
   top: 18px;
   left: 20px;
   width: 32px;
@@ -117,7 +117,7 @@
 
 .tabs-nav__item--religion::before {
   position: absolute;
-  content:"";
+  content: "";
   top: 22px;
   left: 24px;
   width: 23px;
@@ -141,9 +141,9 @@
   text-transform: uppercase;
   font-variant: small-caps;
   color: $white;
-  clip-path: polygon(0 0,86% 0,100% 52%,86% 100%,0 100%);
-  background: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
-  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+  clip-path: polygon(0 0, 86% 0, 100% 52%, 86% 100%, 0 100%);
+  background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 
   @media (min-width: $mobile-width) and (max-width: 679px) {
     clip-path: none;

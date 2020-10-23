@@ -8,8 +8,8 @@
 }
 
 .swiper::after {
-  content: '';
   position: absolute;
+  content: "";
   right: 0;
   top: -46px;
   width: 1366px;
@@ -25,13 +25,14 @@
 }
 
 .swiper__title {
-  margin: 0;
+  @include list-reset;
+  font-family: "Montserrat", sans-serif;
   padding-bottom: 20px;
   font-size: 40px;
   line-height: 49px;
   font-weight: bold;
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: $blue;
 }
@@ -147,14 +148,14 @@
   }
 
   .swiper-wrapper {
-		justify-content: initial;
     flex-wrap: nowrap;
+    justify-content: initial;
     margin-bottom: 15px;
   }
 
-	.swiper-card {
+  .swiper-card {
     margin: 0;
-		width: 288px;
+    width: 288px;
     height: 400px;
     flex-shrink: 0;
 
@@ -176,7 +177,7 @@
     }
 
     &--five {
-      background-image: url("../img/5-mob.jpg")
+      background-image: url("../img/5-mob.jpg");
     }
   }
 
@@ -197,7 +198,7 @@
   .swiper-pagination-bullet-active {
     width: 8px;
     height: 8px;
-    background: linear-gradient(108.42deg, #FFC341 20.46%, #FFD701 65.31%);
+    background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
     opacity: 1;
   }
 }

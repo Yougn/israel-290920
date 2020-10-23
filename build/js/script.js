@@ -1,4 +1,4 @@
-//реализация модального окна "Заявка принята"
+//Реализация модального окна "Заявка принята"
 
 let openModalForm = document.getElementsByTagName('form');
 let modalApplication = document.querySelector('.application');
@@ -11,13 +11,11 @@ let closeForm = function () {
 };
 
 let buttonClose = document.querySelector('.application__btn');
-
 buttonClose.addEventListener('click', function () {
   closeForm();
 });
 
 let crossClose = document.querySelector('.application__btn-close');
-
 crossClose.addEventListener('click', function () {
   closeForm();
 });
@@ -45,7 +43,7 @@ for (let i = 0; i < openModalForm.length; i++) {
 
 window.addEventListener('keydown', closeModalEsc);
 
-//реализация модального окна "Заказать звонок"
+//Реализация модального окна "Заказать звонок"
 
 let openFormCall = document.querySelector('.request-call');
 let modalCall = document.querySelector('.order');
@@ -59,7 +57,6 @@ let closeFormCall = function () {
 };
 
 let crossCloseCall = document.querySelector('.order__btn-close');
-
 crossCloseCall.addEventListener('click', function () {
   closeFormCall();
 });

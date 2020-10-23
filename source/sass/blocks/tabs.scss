@@ -8,8 +8,8 @@
 }
 
 .tabs::after {
-  content: '';
   position: absolute;
+  content: "";
   right: 0;
   top: -52px;
   width: 680px;
@@ -36,13 +36,13 @@
   max-width: 945px;
   margin: 0 auto;
 
-  @media (min-width: 320px) and (max-width: 960px) {
+  @media (min-width: $mobile-width) and (max-width: 960px) {
     max-width: 100%;
   }
 }
 
 .tabs__title {
-  margin: 0;
+  @include list-reset;
   padding-bottom: 55px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -69,7 +69,7 @@
 .tabs__wrapper {
   display: flex;
 
-  @media (min-width: 320px) and (max-width: 960px) {
+  @media (min-width: $mobile-width) and (max-width: 960px) {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
@@ -85,12 +85,12 @@
 }
 
 .tabs__cover {
-	display: flex;
+  display: flex;
   flex-direction: column;
 }
 
 .tabs__subtitle {
-  margin: 0;
+  @include list-reset;
   padding-top: 27px;
   padding-bottom: 24px;
   font-family: "Montserrat", sans-serif;
@@ -134,10 +134,10 @@
 }
 
 .tab {
-	display: none;
+  display: none;
 }
 
 .tab.is-active {
-	display: block;
-	padding-left: 0;
+  display: block;
+  padding-left: 0;
 }

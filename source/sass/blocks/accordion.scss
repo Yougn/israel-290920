@@ -8,8 +8,8 @@
 }
 
 .accordion::after {
-  content: '';
   position: absolute;
+  content: "";
   left: 0;
   bottom: -103px;
   width: 194px;
@@ -55,12 +55,13 @@
 }
 
 .accordion__title {
-  margin: 0;
+  @include list-reset;
   padding-bottom: 32px;
+  font-family: "Montserrat", sans-serif;
   font-size: 40px;
   line-height: 49px;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
   text-align: left;
   text-transform: uppercase;
   color: $blue;
@@ -128,11 +129,11 @@
     font-size: 16px;
     line-height: 26px;
 
-    &--organizer  {
+    &--organizer {
       padding-bottom: 17px;
     }
 
-    &--grant  {
+    &--grant {
       padding-bottom: 16px;
     }
 
@@ -149,14 +150,14 @@
 
     &--registration {
       padding-top: 22px;
-      padding-right: 55px
+      padding-right: 55px;
     }
   }
 }
 
-.accordion__box:after {
+.accordion__box::after {
   position: absolute;
-  content: '';
+  content: "";
   top: 24px;
   right: 34px;
   width: 20px;
@@ -169,27 +170,27 @@
   }
 }
 
-.accordion__box--grant:after {
+.accordion__box--grant::after {
   top: 45px;
 }
 
-.accordion__box--prise:after {
+.accordion__box--prise::after {
   top: 37px;
 }
 
-.accordion__box--aboutgrant:after {
+.accordion__box--aboutgrant::after {
   top: 53px;
 }
 
-.accordion__box--masa:after {
+.accordion__box--masa::after {
   top: 45px;
 }
 
-.accordion__box--registration:after {
+.accordion__box--registration::after {
   top: 50px;
 }
 
-.active:after {
+.active::after {
   background-image: url("../img/arrow-down.svg");
   transform: rotate(-180deg);
 }
@@ -212,7 +213,7 @@
 }
 
 .panel {
-  margin: 0;
+  @include list-reset;
   width: 560px;
   max-height: 0;
   padding-right: 40px;
@@ -240,7 +241,7 @@
   width: 645px;
   height: 803px;
   background-image: url("../img/accordion.jpg");
-  background-color: #e5e5e5;
+  background-color: $bg-color;
   z-index: -1;
 
   @media (min-width: $mobile-width) and (max-width: 1300px) {

@@ -9,7 +9,7 @@
 
 .slider::after {
   position: absolute;
-  content: '';
+  content: "";
   right: 0;
   bottom: 163px;
   width: 535px;
@@ -55,8 +55,8 @@
 }
 
 .slider-wrap {
-	display: flex;
-	width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .slide {
@@ -174,7 +174,7 @@
 
 .swiper-button-prev {
   position: absolute;
-  content: '';
+  content: "";
   left: 454px;
   bottom: 5px;
   width: 20px;
@@ -197,7 +197,7 @@
 
 .swiper-button-next {
   position: absolute;
-  content: '';
+  content: "";
   left: 493px;
   bottom: 8px;
   width: 20px;
