@@ -1,34 +1,40 @@
-// Реализация swiper-slider
+'use strict';
 
-let slider = document.querySelector('.swiper-container');
+(function () {
 
-let mySwiper;
+  // Реализация swiper-slider
 
-function mobileSlider() {
-  if (window.innerWidth <= 700 && slider.dataset.mobile == 'false') {
-    mySwiper = new Swiper(slider, {
-      slidesPerView: 1,
-      loop: true,
-      slideClass: 'swiper-card',
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+  let slider = document.querySelector('.swiper-container');
+
+  let mySwiper;
+
+  function mobileSlider() {
+    if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
+      mySwiper = new Swiper(slider, {
+        slidesPerView: 1,
+        loop: true,
+        slideClass: 'swiper-card',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        }
+      });
+
+      slider.dataset.mobile = 'true';
+    }
+
+    if (window.innerWidth > 767) {
+      slider.dataset.mobile = 'false';
+      if (slider.classList.contains('swiper-container-initialized')) {
+        mySwiper.destroy();
       }
-    });
-
-    slider.dataset.mobile = 'true';
-  }
-
-  if (window.innerWidth > 700) {
-    slider.dataset.mobile = 'false';
-    if (slider.classList.contains('swiper-container-initialized')) {
-      mySwiper.destroy();
     }
   }
-}
 
-mobileSlider()
+  mobileSlider()
 
-window.addEventListener('resize', () => {
-  mobileSlider();
-});
+  window.addEventListener('resize', () => {
+    mobileSlider();
+  });
+
+})();

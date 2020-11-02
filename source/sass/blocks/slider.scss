@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: 107px;
 
+  &:focus-within {
+    border: 1px solid;
+  }
+
   @media (min-width: $mobile-width) and (max-width: 767px) {
     margin-bottom: 80px;
   }
@@ -27,7 +31,12 @@
   margin-left: 7%;
   overflow: hidden;
 
-  @media (min-width: $mobile-width) and (max-width: 1200px) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 767px) {
     margin: 0 auto;
   }
 }
@@ -98,7 +107,7 @@
   color: $black;
   opacity: 0.74;
 
-  @media (min-width: 768px) and (max-width: 900px) {
+  @media (min-width: $tablet-width) and (max-width: 900px) {
     padding-top: 0;
   }
 
@@ -113,7 +122,7 @@
   color: $black;
   opacity: 0.74;
 
-  @media (min-width: 768px) and (max-width: 900px) {
+  @media (min-width: $tablet-width) and (max-width: 900px) {
     padding-bottom: 0;
   }
 
@@ -140,7 +149,7 @@
   color: #484848;
   opacity: $black;
 
-  @media (min-width: 768px) and (max-width: 830px) {
+  @media (min-width: $tablet-width) and (max-width: 830px) {
     padding-bottom: 5px;
 
     &--bottom {
@@ -167,6 +176,15 @@
   text-decoration-line: underline;
   color: $blue;
 
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
   @media (min-width: $mobile-width) and (max-width: 767px) {
     letter-spacing: -0.5px;
   }
@@ -175,61 +193,132 @@
 .swiper-button-prev {
   position: absolute;
   content: "";
-  left: 454px;
-  bottom: 5px;
+  top: 532px;
+  left: 43%;
   width: 20px;
   height: 20px;
   background-image: url("../img/arrow-down.svg");
   transform: rotate(90deg);
   background-repeat: no-repeat;
   background-color: transparent;
+  outline: none;
   cursor: pointer;
 
-  @media (min-width: 768px) and (max-width: 1000px) {
-    left: 570px;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
   }
 
-  @media (min-width: $mobile-width) and (max-width: 767px) {
-    top: 395px;
+  &:active {
+    opacity: 0.4;
+  }
+
+  @media (min-width: $desktop-width) and (max-width: 1100px) {
+    top: 508px;
+  }
+
+  @media (min-width: 901px) and (max-width: $desktop-width) {
+    top: 540px;
+    left: 65%;
+  }
+
+  @media (min-width: 831px) and (max-width: 900px) {
+    top: 465px;
+    left: 65%;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 830px) {
+    top: 450px;
+    left: 65%;
+  }
+
+  @media (min-width: 450px) and (max-width: 767px) {
+    top: 415px;
     left: 50%;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 449px) {
+    top: 415px;
+    left: 52%;
   }
 }
 
 .swiper-button-next {
   position: absolute;
   content: "";
-  left: 493px;
-  bottom: 8px;
+  top: 532px;
+  left: 45%;
   width: 20px;
   height: 20px;
   background-image: url("../img/arrow-down.svg");
   transform: rotate(-90deg);
   background-repeat: no-repeat;
   background-color: transparent;
+  outline: none;
   cursor: pointer;
 
-  @media (min-width: 768px) and (max-width: 1000px) {
-    left: 600px;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @media (min-width: $desktop-width) and (max-width: 1100px) {
+    top: 508px;
+  }
+
+  @media (min-width: 901px) and (max-width: $desktop-width) {
+    top: 540px;
+    left: 69.5%;
+  }
+
+  @media (min-width: 831px) and (max-width: 900px) {
+    top: 465px;
+    left: 69.5%;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 830px) {
+    top: 450px;
+    left: 69.5%;
   }
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
-    top: 394px;
-    left: 62%;
+    top: 415px;
+    left: 48%;
+    margin-left: 40px;
   }
 }
 
 .swiper-pagination-fraction {
   position: absolute;
-  left: 409px;
-  bottom: 5px;
+  top: 510px;
+  left: -120px;
 
-  @media (min-width: 768px) and (max-width: 1000px) {
-    left: 530px;
+  @media (min-width: $desktop-width) and (max-width: 1100px) {
+    top: 485px;
+  }
+
+  @media (min-width: 901px) and (max-width: 1023px) {
+    top: 515px;
+    left: 26%;
+  }
+
+  @media (min-width: 831px) and (max-width: 900px) {
+    top: 440px;
+    left: 26%;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 830px) {
+    top: 430px;
+    left: 26%;
   }
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     top: 395px;
-    left: 36%;
+    left: -9%;
   }
 }
 
@@ -240,12 +329,18 @@
   right: -10px;
   bottom: 0;
 
-  @media (min-width: 768px) and (max-width: 1200px) {
+  @media (min-width: $desktop-width) and (max-width: 1050px) {
+    bottom: 10px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1200px) {
     right: 10px;
+    bottom: 0;
   }
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     position: relative;
+    bottom: 0;
     left: -12px;
     padding-top: 14px;
   }

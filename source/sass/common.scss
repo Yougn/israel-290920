@@ -2,6 +2,7 @@ body {
   @include list-reset;
   width: 100%;
   min-width: 320px;
+  height: 100vh;
   font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 15px;
   font-style: normal;
@@ -9,6 +10,10 @@ body {
   line-height: 21px;
   text-align: center;
   color: $black;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 *,
@@ -49,6 +54,22 @@ img {
   background: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   border-radius: 80px;
+  outline: none;
   cursor: pointer;
   border: none;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%);
+  }
+
+  &:active {
+    background: radial-gradient(150% 119.49% at 50% 50.85%,
+  rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%),
+    linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%);
+  }
+}
+
+.hidden {
+  overflow: hidden;
 }

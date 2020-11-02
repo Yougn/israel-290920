@@ -19,7 +19,7 @@
 .contacts__wrapper {
   display: flex;
 
-  @media (min-width: 768px) and (max-width: 1180px) {
+  @media (min-width: 768px) and (max-width: 1200px) {
     justify-content: space-between;
   }
 
@@ -33,7 +33,7 @@
   margin-right: 15px;
   text-align: left;
 
-  @media (min-width: $mobile-width) and (max-width: 1180px) {
+  @media (min-width: $mobile-width) and (max-width: 1200px) {
     margin-right: 0;
   }
 }
@@ -43,7 +43,7 @@
   padding-top: 3px;
   padding-bottom: 15px;
   max-width: 360px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 500;
   line-height: 25px;
@@ -76,7 +76,7 @@
   justify-content: space-between;
   width: 780px;
 
-  @media (min-width: 950px) and (max-width: 1180px) {
+  @media (min-width: 950px) and (max-width: 1200px) {
     justify-content: center;
     width: 520px;
   }
@@ -99,6 +99,7 @@
   border-radius: 80px;
   color: $black;
   opacity: 0.87;
+  outline: none;
   cursor: pointer;
 
   &::placeholder {
@@ -130,10 +131,14 @@
 }
 
 .contacts__tel {
-  @media (min-width: $mobile-width) and (max-width: 1180px) {
+  @media (min-width: $mobile-width) and (max-width: 1200px) {
     margin-bottom: 24px;
     margin-left: 10px;
   }
+}
+
+.contacts__tel input {
+  border: 2px solid $yellow;
 }
 
 .contacts__btn {
@@ -146,6 +151,7 @@
   font-variant: small-caps;
   color: $white;
   text-shadow: 0 1px 4px rgba($black, 0.12);
+  z-index: 3;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     padding: 20px 61px;

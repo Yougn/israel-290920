@@ -3,7 +3,7 @@
   margin-bottom: 253px;
 
   @media (min-width: $mobile-width) and (max-width: 600px) {
-    margin-bottom: 235px;
+    margin-bottom: 190px;
   }
 }
 
@@ -29,7 +29,7 @@
   margin: 0 auto;
   padding-left: 110px;
 
-  @media (min-width: $mobile-width) and (max-width: 1300px) {
+  @media (min-width: $mobile-width) and (max-width: 1320px) {
     padding-left: 0;
   }
 }
@@ -40,7 +40,7 @@
   justify-content: flex-start;
   width: 560px;
 
-  @media (min-width: 601px) and (max-width: 1300px) {
+  @media (min-width: 601px) and (max-width: 1320px) {
     justify-content: center;
     margin-right: auto;
     margin-left: auto;
@@ -57,7 +57,7 @@
 .accordion__title {
   @include list-reset;
   padding-bottom: 32px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 40px;
   line-height: 49px;
   font-weight: bold;
@@ -73,7 +73,7 @@
     font-size: 32px;
     line-height: 39px;
     text-align: center;
-    letter-spacing: 3.5px;
+    letter-spacing: 1.5px;
   }
 }
 
@@ -93,6 +93,15 @@
   transition: 0.5s;
   outline: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.74);
+  }
+
+  &:active {
+    color: rgba($black, 0.2);
+  }
 
   &--organizer {
     padding-top: 0;
@@ -244,7 +253,7 @@
   background-color: $bg-color;
   z-index: -1;
 
-  @media (min-width: $mobile-width) and (max-width: 1300px) {
+  @media (min-width: $mobile-width) and (max-width: 1320px) {
     display: none;
   }
 }

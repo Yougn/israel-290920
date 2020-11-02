@@ -51,7 +51,7 @@
 .feedback__title {
   @include list-reset;
   padding-bottom: 23px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
@@ -108,6 +108,7 @@
   font-variant: small-caps;
   border: 2px solid $bg-color;
   border-radius: 80px;
+  outline: none;
   color: $black;
   opacity: 0.87;
   cursor: pointer;
@@ -154,7 +155,7 @@
 .feedback__picture img {
   position: absolute;
   right: 0;
-  bottom: -131px;
+  bottom: -130px;
   z-index: -1;
 
   @media (min-width: 451px) and (max-width: 670px) {

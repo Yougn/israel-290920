@@ -26,10 +26,31 @@
   opacity: 0.87;
   cursor: pointer;
 
+  &--all:hover::before {
+    background-image: url("../img/star_y.png");
+  }
+
+  &--academic:hover::before {
+    background-image: url("../img/hat_y.png");
+  }
+
+  &--practiсe:hover::before {
+    background-image: url("../img/portf_y.png");
+  }
+
+  &--volounter:hover::before {
+    background-image: url("../img/hand_y.png");
+  }
+
+  &--religion:hover::before {
+    background-image: url("../img/candle_y.png");
+  }
+
   @media (min-width: $mobile-width) and (max-width: 679px) {
     padding: 11px 11px 11px 51px;
   }
 }
+
 
 .tabs-nav__item--all::before {
   position: absolute;

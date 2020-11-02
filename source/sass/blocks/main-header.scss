@@ -23,6 +23,12 @@
   }
 }
 
+@media (min-width: 1520px) and (max-width: 1920px) {
+  .main-header {
+    height: 1212px;
+  }
+}
+
 .main-header__row {
   max-width: 343px;
   padding-top: 525px;

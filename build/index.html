@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Израйль</title>
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/FiraSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="css/style.min.css">
 
-  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
 
   <script>
     // Picture element HTML5 shiv
@@ -27,7 +29,9 @@
 
     <div class="page-header__container">
       <nav class="page-header__nav">
-        <a class="page-header__tel" href="tel:+(972)2–621–6581">+ (972) 2 – 621 – 6581</a>
+        <div class="page-header__box-tel">
+          <a class="page-header__tel" href="tel:+(972)2–621–6581">+ (972) 2 – 621 – 6581</a>
+        </div>
         <a class="page-header__logo">
           <picture>
             <!-- 1х: 767px; -->
@@ -260,12 +264,12 @@
               Познакомьтесь с программой<br> от первого лица! Многие участники ведут блоги и фотодневники о жизни,
               учёбе и путешествиях в Израиле.
             </p>
-            <button class="btn foto__btn" type="button">
+            <a class="btn foto__btn" href="#">
               <svg class="foto__btn-svg" width="24" height="24">
                 <use href="img/sprite.svg#icon-inst"></use>
               </svg>
               СМОТРЕТЬ ФОТО
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -280,10 +284,8 @@
             Кто организатор? Какие сроки у программы?
           </button>
           <div class="panel">
-            <p>Полная стоимость определяется организаторами в зависимости от
-              направления. В большинстве случаев грант «Маса» не покрывает
-              полную стоимость программы, и поэтому предусматривается
-              определённая доля личного участия.
+            <p>Организатором выступает правительство Израйля. Сроки программы варьируются
+              от 4-х месяцев до 1 года.
             </p>
           </div>
           <button class="accordion__box accordion__box--grant">
@@ -291,10 +293,8 @@
             Что такое грант на обучение?
           </button>
           <div class="panel">
-            <p>Полная стоимость определяется организаторами в зависимости от
-              направления. В большинстве случаев грант «Маса» не покрывает
-              полную стоимость программы, и поэтому предусматривается
-              определённая доля личного участия.
+            <p>Гранты на обучение – это компенсация, предоставляемая израильским правительством для частичной или полной
+              оплаты обучения и проживания иностранных студентов, на основе соглашений международных организаций.
             </p>
           </div>
           <button class="accordion__box accordion__box--prise">
@@ -310,13 +310,11 @@
           </div>
           <button class="accordion__box accordion__box--aboutgrant">
             <span class="accordion__question accordion__question--aboutgrant">4</span>
-            Что такое грант на обучение?
+            В программе могут участвовать люди любого возраста?
           </button>
           <div class="panel">
-            <p>Полная стоимость определяется организаторами в зависимости от
-              направления. В большинстве случаев грант «Маса» не покрывает
-              полную стоимость программы, и поэтому предусматривается
-              определённая доля личного участия.
+            <p>В программе могут участвовать только лица достишие 18 лет и
+              не старше 31 года на момент начала программы.
             </p>
           </div>
           <button class="accordion__box accordion__box--masa">
@@ -324,21 +322,17 @@
             Признается ли учеба в рамках проекта для дальнейшего обучения?
           </button>
           <div class="panel">
-            <p>Полная стоимость определяется организаторами в зависимости от
-              направления. В большинстве случаев грант «Маса» не покрывает
-              полную стоимость программы, и поэтому предусматривается
-              определённая доля личного участия.
-            </p>
+            <p>Да, признается.</p>
           </div>
           <button class="accordion__box accordion__box--registration">
             <span class="accordion__question accordion__question--registration">6</span>
-            Как выглядит полный процесс регистрации на программу "Маса"?
+            Как выглядит процесс регистрации на программу "Маса"?
           </button>
           <div class="panel">
-            <p>Полная стоимость определяется организаторами в зависимости от
-              направления. В большинстве случаев грант «Маса» не покрывает
-              полную стоимость программы, и поэтому предусматривается
-              определённая доля личного участия.
+            <p>В первую очередь необходимо собрать полный перечень документов для участия в программе и
+              подать их на рассмотрение. Затем Вам нужно будет пройти психологическое и интеллектуальное
+              тестирования. В случае успешного прохождения Вам будет предложено подписать договор
+              на участие в программе.
             </p>
           </div>
           <div class="accordion__image"></div>
@@ -538,7 +532,7 @@
             </div>
             <div class="contacts__tel">
               <label for="phone"></label>
-              <input type="tel" name="telephone" id="phone" placeholder="+7 (923) 41" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
+              <input id="phone" type="tel" name="telephone" placeholder="+7 (923) 41" required="">
             </div>
             <button class="btn contacts__btn call-me" type="submit" aria-label="Кнопка оправить заказ">
               ПЕРЕЗВОНИТЕ МНЕ
@@ -628,17 +622,20 @@
             <input type="tel" name="telephone" id="number" placeholder="ТЕЛЕФОН" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
           </li>
         </ul>
-        <button class="btn order__btn" type="submit">ПЕРЕЗВОНИТЕ МНЕ</button>
+        <button id="btn" class="btn order__btn" type="submit" disabled="">ПЕРЕЗВОНИТЕ МНЕ</button>
         <p class="order__checkbox">
           <input class="order__checkbox-input visually-hidden" type="checkbox" name="agreement" id="agreement" value="Согласие">
           <label for="agreement"></label>
           Нажимая на кнопку, вы даёте согласие на обработку персональных данных
         </p>
-        <button type="button" class="order__btn-close"><span class="visually-hidden"> Закрыть окно</span></button>
+        <button class="order__btn-close" type="button">
+          <span class="visually-hidden"> Закрыть окно</span>
+        </button>
       </div>
     </form>
   </section>
 
+  <script src="js/swiper.min.js"></script>
   <script src="js/script.js"></script>
   <script src="js/tabs.js"></script>
   <script src="js/swiper.js"></script>

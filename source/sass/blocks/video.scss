@@ -9,7 +9,7 @@
 .video__title {
   @include list-reset;
   padding-bottom: 32px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 40px;
   font-weight: bold;
   line-height: 30px;
@@ -61,9 +61,23 @@
   background-color: transparent;
   cursor: pointer;
   border: none;
+  opacity: 1;
   zoom: 1;
 
-  @media (min-width: $mobile-width) and (max-width: 500px) {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @media (min-width: 500px) and (max-width: 900px) {
+    top: 50%;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: 499px) {
     top: 66%;
     zoom: 0.8;
   }

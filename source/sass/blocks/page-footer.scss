@@ -21,6 +21,7 @@
 
 .page-footer__logo {
   padding: 24px 0;
+  z-index: 3;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     padding: 30px 0 5px;
@@ -37,6 +38,7 @@
   font-size: 12px;
   line-height: 18px;
   color: rgba($black, 0.5);
+  z-index: 3;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     padding-left: 0;
@@ -58,6 +60,19 @@
     &--twitter {
       padding-right: 7px;
     }
+  }
+}
+
+.page-footer__link {
+  opacity: 1;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
   }
 }
 
