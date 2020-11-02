@@ -1,4 +1,4 @@
-.foto {
+.photo {
   margin-bottom: 138px;
 
   @media (min-width: $mobile-width) and (max-width: 599px) {
@@ -6,7 +6,7 @@
   }
 }
 
-.foto__container {
+.photo__container {
   width: 100%;
   max-width: 1366px;
   margin: 0 auto;
@@ -17,7 +17,7 @@
   }
 }
 
-.foto__bg {
+.photo__bg {
   width: 100%;
   height: 586px;
   background-image: url("../img/foto.jpg");
@@ -44,7 +44,7 @@
   }
 }
 
-.foto__wrapper {
+.photo__wrapper {
   padding-top: 9%;
   padding-right: 13%;
   padding-bottom: 13%;
@@ -63,7 +63,7 @@
   }
 }
 
-.foto__title {
+.photo__title {
   @include list-reset;
   padding-bottom: 22px;
   font-family: "Montserrat", "Arial", sans-serif;
@@ -80,7 +80,7 @@
   }
 }
 
-.foto__description {
+.photo__description {
   margin: 0;
   padding-bottom: 47px;
   font-size: 17px;
@@ -98,7 +98,7 @@
   }
 }
 
-.foto__description br {
+.photo__description br {
   display: none;
 
   @media (min-width: $mobile-width) and (max-width: 600px) {
@@ -106,7 +106,7 @@
   }
 }
 
-.foto__btn {
+.photo__btn {
   position: relative;
   padding: 21px 45px 20px 74px;
   margin-left: -5px;
@@ -118,7 +118,7 @@
   }
 }
 
-.foto__btn-svg {
+.photo__btn-svg {
   position: absolute;
   top: 17px;
   left: 40px;
