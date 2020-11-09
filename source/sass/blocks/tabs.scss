@@ -1,6 +1,6 @@
 .tabs {
   position: relative;
-  margin-bottom: 222px;
+  margin-bottom: 215px;
 
   @media (min-width: $mobile-width) and (max-width: 679px) {
     margin-bottom: 80px;
@@ -41,15 +41,15 @@
   }
 }
 
-.tabs__title {
-  @include list-reset;
+.tabs__container h2 {
+  @include reset;
   padding-bottom: 55px;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-weight: bold;
   font-size: 40px;
   line-height: 49px;
   text-align: left;
-  letter-spacing: 2.5px;
+  letter-spacing: -1px;
   text-transform: uppercase;
   color: $blue;
 
@@ -62,7 +62,6 @@
     font-size: 32px;
     line-height: 39px;
     text-align: center;
-    letter-spacing: 2px;
   }
 }
 
@@ -89,15 +88,14 @@
   flex-direction: column;
 }
 
-.tabs__subtitle {
-  @include list-reset;
+.tabs__cover h3 {
+  @include reset;
   padding-top: 27px;
   padding-bottom: 24px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-weight: bold;
   font-size: 28px;
   line-height: 34px;
-  letter-spacing: 2px;
   text-align: left;
   color: $blue;
 
@@ -109,7 +107,7 @@
 }
 
 .tabs__text {
-  margin: 0;
+  @include reset;
   line-height: 26px;
   text-align: left;
   color: $black;

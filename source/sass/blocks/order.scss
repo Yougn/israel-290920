@@ -50,10 +50,10 @@
   }
 }
 
-.order__title {
-  @include list-reset;
+.order__wrap h2 {
+  @include reset;
   padding-bottom: 15px;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
@@ -70,8 +70,8 @@
   }
 }
 
-.order__text {
-  @include list-reset;
+.order__wrap p {
+  @include reset;
   max-width: 357px;
   padding-bottom: 33px;
   font-size: 15px;
@@ -89,7 +89,7 @@
   }
 }
 
-.order__text br {
+.order__wrap p br {
   display: none;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {

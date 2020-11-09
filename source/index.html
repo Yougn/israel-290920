@@ -10,13 +10,7 @@
   <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/FiraSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
-
-  <script>
-    // Picture element HTML5 shiv
-    document.createElement("picture");
-  </script>
   <script src="js/picturefill.js" async=""></script>
-  <!-- Swiper JS -->
 </head>
 
 <body>
@@ -61,6 +55,9 @@
       </p>
       <div class="video__box">
         <picture class="video__picture">
+          <source type="image/webp" media="(min-width: 500px)"
+            srcset="img/people-video.webp 1x, img/people-video@2x.webp 2x">
+          <source type="image/webp" srcset="img/people-video-mobile.webp, img/people-video-mobile@2x.webp 2x">
           <!-- 1х: 1366px; 2x: 2732px -->
           <source media="(min-width: 500px)" srcset="img/people-video.png, img/people-video@2x.png 2x">
           <!-- 1х: 320px; 2x: 640px-->
@@ -174,7 +171,7 @@
             Оставьте свой телефон и мы свяжемся с вами, подберём куратора и ответим на все вопросы!
           </p>
           <form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
-            <label for="telephone"></label>
+            <label for="telephone" class="visually-hidden">ТЕЛЕФОН</label>
             <input type="tel" name="telephone" id="telephone" placeholder="ТЕЛЕФОН"
               pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
             <button class="btn feedback__btn call-me" type="submit" aria-label="Перезвоните мне">
@@ -184,6 +181,9 @@
         </div>
         <div class="feedback__box">
           <picture class="feedback__picture">
+            <source type="image/webp" media="(min-width: 350px)"
+              srcset="img/girl-flag-bg.webp, img/girl-flag-bg@2x.webp 2x">
+            <source type="image/webp" srcset="img/girl-flag-bg-mob.webp, img/girl-flag-bg-mob@2x.webp 2x">
             <!-- 1х: 350px; 2x: 1636px -->
             <source media="(min-width: 350px)" srcset="img/girl-flag-bg.jpg, img/girl-flag-bg@2x.jpg 2x">
             <!-- 1х: 320px; 2x: 640px-->
@@ -205,7 +205,7 @@
             Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.
           </p>
           <p class="criteria__subtitle">
-            Чтобы иметь возможность получить грант на обучение от 4200 до 8400$, вы должны:
+            Чтобы иметь возможность получить грант на обучение<br> от 4200 до 8400$, вы должны:
           </p>
           <ul class="criteria__list">
             <li class="criteria__item criteria__item--age">
@@ -343,6 +343,8 @@
           <div class="slide">
             <div class="slide__row">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/girl.webp 1x, img/girl@2x.webp 2x">
+                <source type="image/webp" srcset="img/girl-mob.webp, img/girl-mob@2x.webp 2x">
                 <!-- 1х: 364px; 2x: 728px -->
                 <source media="(min-width: 768px)" srcset="img/girl.jpg, img/girl@2x.jpg 2x">
                 <!-- 1х: 320px; 2x: 480px-->
@@ -364,39 +366,32 @@
                   удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки
                   всей программой в разные уголки страны.
                 </p>
-                <a class="slide__link" href="#">Читать подробнее</a>
-                <ul class="slide__social-list">
-                  <li class="slide__item slide__item--facebook">
-                    <a class="slide__link slide__link--facebook" href="#">
-                      <span class="visually-hidden">Мы в Фейсбуке</span>
-                      <svg class="slide__svg slide__svg--fb" width="24" height="24">
-                        <use href="img/sprite.svg#icon-fb"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="slide__item slide__item--twitter">
-                    <a class="slide__link slide__link--twitter" href="#">
-                      <span class="visually-hidden">Мы в Твиттере</span>
-                      <svg class="slide__svg slide__svg--twitter" width="24" height="24">
-                        <use href="img/sprite.svg#icon-tw"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="slide__item slide__item--insta">
-                    <a class="slide__link slide__link--insta" href="#">
-                      <span class="visually-hidden">Мы в Инстаграм</span>
-                      <svg class="slide__svg slide__svg--insta" width="24" height="24">
-                        <use href="img/sprite.svg#icon-insta"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                <a class="slide__link-details" href="#">Читать подробнее</a>
+                <div class="slide__social-list">
+                  <a class="slide__link slide__link--facebook" href="#">
+                    <svg class="slide__svg slide__svg--fb" width="24" height="24">
+                      <use href="img/sprite.svg#icon-fb"></use>
+                    </svg>
+                  </a>
+                  <a class="slide__link slide__link--twitter" href="#">
+                    <svg class="slide__svg slide__svg--twitter" width="24" height="24">
+                      <use href="img/sprite.svg#icon-tw"></use>
+                    </svg>
+                  </a>
+                  <a class="slide__link slide__link--insta" href="#">
+                    <svg class="slide__svg slide__svg--insta" width="24" height="24">
+                      <use href="img/sprite.svg#icon-insta"></use>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
           <div class="slide">
             <div class="slide__row">
               <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/girl.webp 1x, img/girl@2x.webp 2x">
+                <source type="image/webp" srcset="img/girl-mob.webp, img/girl-mob@2x.webp 2x">
                 <!-- 1х: 364px; 2x: 728px -->
                 <source media="(min-width: 768px)" srcset="img/girl.jpg, img/girl@2x.jpg 2x">
                 <!-- 1х: 320px; 2x: 480px-->
@@ -408,9 +403,9 @@
                   Арт-Тель, февраль-сетнябрь 2017
                 </p>
                 <p class="slide__text slide__text--top">
-                  Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев
-                  «иврит как культура». Мне очень повезло оказаться в надежных и заботливых
-                  руках Анны, Юлии и Олега.
+                  Долго выбирая программу, на которую ехать - я определилась,
+                  взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в
+                  надежных и заботливых руках Анны, Юлии и Олега.
                 </p>
                 <p class="slide__text slide__text--bottom">
                   С первой же встречи тебе дают понять - что ты не один, у тебя есть практически
@@ -418,41 +413,32 @@
                   удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки
                   всей программой в разные уголки страны.
                 </p>
-                <a class="slide__link" href="#">Читать подробнее</a>
-                <ul class="slide__social-list">
-                  <li class="slide__item slide__item--facebook">
-                    <a class="slide__link slide__link--facebook" href="#">
-                      <span class="visually-hidden">Мы в Фейсбуке</span>
-                      <svg class="slide__svg slide__svg--fb" width="24" height="24">
-                        <use href="img/sprite.svg#icon-fb"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="slide__item slide__item--twitter">
-                    <a class="slide__link slide__link--twitter" href="#">
-                      <span class="visually-hidden">Мы в Твиттере</span>
-                      <svg class="slide__svg slide__svg--twitter" width="24" height="24">
-                        <use href="img/sprite.svg#icon-tw"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="slide__item slide__item--insta">
-                    <a class="slide__link slide__link--insta" href="#">
-                      <span class="visually-hidden">Мы в Инстаграм</span>
-                      <svg class="slide__svg slide__svg--insta" width="24" height="24">
-                        <use href="img/sprite.svg#icon-insta"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
+                <a class="slide__link-details" href="#">Читать подробнее</a>
+                <div class="slide__social-list">
+                  <a class="slide__link slide__link--facebook" href="#">
+                    <svg class="slide__svg slide__svg--fb" width="24" height="24">
+                      <use href="img/sprite.svg#icon-fb"></use>
+                    </svg>
+                  </a>
+                  <a class="slide__link slide__link--twitter" href="#">
+                    <svg class="slide__svg slide__svg--twitter" width="24" height="24">
+                      <use href="img/sprite.svg#icon-tw"></use>
+                    </svg>
+                  </a>
+                  <a class="slide__link slide__link--insta" href="#">
+                    <svg class="slide__svg slide__svg--insta" width="24" height="24">
+                      <use href="img/sprite.svg#icon-insta"></use>
+                    </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="slider-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
+      <div class="slider-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </section>
 
     <section class="details">
@@ -523,11 +509,11 @@
           </div>
           <form class="contacts__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="contacts__name">
-              <label for="name"></label>
+              <label for="name" class="visually-hidden">ИМЯ</label>
               <input type="text" name="name" id="name" placeholder="ИМЯ" required="">
             </div>
             <div class="contacts__tel">
-              <label for="phone"></label>
+              <label for="phone" class="visually-hidden">ТЕЛЕФОН</label>
               <input id="phone" type="tel" name="telephone" placeholder="+7 (923) 41" required="">
             </div>
             <button class="btn contacts__btn call-me" type="submit" aria-label="Кнопка оправить заказ">
@@ -610,11 +596,11 @@
         </p>
         <ul class="order__list">
           <li class="order__item order__item--name">
-            <label for="login"></label>
+            <label for="login" class="visually-hidden">ИМЯ</label>
             <input type="text" name="name" id="login" placeholder="ИМЯ" required="">
           </li>
           <li class="order__item order__item--tel">
-            <label for="number"></label>
+            <label for="number" class="visually-hidden">ТЕЛЕФОН</label>
             <input type="tel" name="telephone" id="number" placeholder="ТЕЛЕФОН"
               pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required="">
           </li>
@@ -623,7 +609,7 @@
         <p class="order__checkbox">
           <input class="order__checkbox-input visually-hidden" type="checkbox" name="agreement" id="agreement"
             value="Согласие">
-          <label for="agreement"></label>
+          <label for="agreement" class="visually-hidden">Согласие</label>
           Нажимая на кнопку, вы даёте согласие на обработку персональных данных
         </p>
         <button class="order__btn-close" type="button">
@@ -634,11 +620,7 @@
   </section>
 
   <script src="js/swiper.min.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/tabs.js"></script>
-  <script src="js/swiper.js"></script>
-  <script src="js/accordion.js"></script>
-  <script src="js/slider.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

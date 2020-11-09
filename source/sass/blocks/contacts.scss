@@ -38,15 +38,16 @@
   }
 }
 
-.contacts__title {
-  @include list-reset;
+.contacts__column h3 {
+  @include reset;
   padding-top: 3px;
   padding-bottom: 15px;
   max-width: 360px;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 17px;
   font-weight: 500;
   line-height: 25px;
+  letter-spacing: -1.5px;
   color: $black;
   opacity: 0.87;
 
@@ -57,8 +58,8 @@
   }
 }
 
-.contacts__description {
-  @include list-reset;
+.contacts__column p {
+  @include reset;
   max-width: 364px;
   font-size: 13px;
   line-height: 19px;
@@ -139,6 +140,11 @@
 
 .contacts__tel input {
   border: 2px solid $yellow;
+
+  &:focus,
+  &:hover .phone__error {
+    border: 2px solid red;
+  }
 }
 
 .contacts__btn {

@@ -20,7 +20,7 @@
 }
 
 .page-footer__logo {
-  padding: 24px 0;
+  padding: 20px 0;
   z-index: 3;
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
@@ -34,7 +34,7 @@
 }
 
 .page-footer__copyright {
-  padding-left: 35px;
+  padding-left: 20px;
   font-size: 12px;
   line-height: 18px;
   color: rgba($black, 0.5);

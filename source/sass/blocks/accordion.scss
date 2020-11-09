@@ -54,14 +54,14 @@
   }
 }
 
-.accordion__title {
-  @include list-reset;
+.accordion__wrapper h2 {
+  @include reset;
   padding-bottom: 32px;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 40px;
   line-height: 49px;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: -1px;
   text-align: left;
   text-transform: uppercase;
   color: $blue;
@@ -73,7 +73,6 @@
     font-size: 32px;
     line-height: 39px;
     text-align: center;
-    letter-spacing: 1.5px;
   }
 }
 
@@ -222,7 +221,7 @@
 }
 
 .panel {
-  @include list-reset;
+  @include reset;
   width: 560px;
   max-height: 0;
   padding-right: 40px;

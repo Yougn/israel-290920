@@ -24,24 +24,24 @@
   }
 }
 
-.swiper__title {
-  @include list-reset;
-  font-family: "Arial", sans-serif;
-  padding-bottom: 20px;
+.swiper h2 {
+  @include reset;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
+  padding-bottom: 24px;
   font-size: 40px;
   line-height: 49px;
   font-weight: bold;
   text-align: center;
-  letter-spacing: 1.5px;
+  letter-spacing: -1px;
   text-transform: uppercase;
   color: $blue;
 }
 
-.swiper__title br {
+.swiper h2 br {
   display: none;
 }
 
-.swiper__description {
+.swiper p {
   max-width: 725px;
   margin: 0 auto;
   font-size: 17px;
@@ -123,14 +123,13 @@
 }
 
 @media (min-width: $mobile-width) and (max-width: 767px) {
-  .swiper__title {
+  .swiper h2 {
     padding-bottom: 22px;
     font-size: 32px;
     line-height: 39px;
-    letter-spacing: 1px;
   }
 
-  .swiper__description {
+  .swiper p {
     max-width: 282px;
     padding-right: 6px;
     padding-bottom: 25px;
@@ -139,7 +138,7 @@
     text-align: left;
   }
 
-  .swiper__title br {
+  .swiper h2 br {
     display: block;
   }
 

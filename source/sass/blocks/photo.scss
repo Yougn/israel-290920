@@ -1,5 +1,5 @@
 .photo {
-  margin-bottom: 138px;
+  margin-bottom: 132px;
 
   @media (min-width: $mobile-width) and (max-width: 599px) {
     margin-bottom: 155px;
@@ -63,14 +63,14 @@
   }
 }
 
-.photo__title {
-  @include list-reset;
+.photo__wrapper h2 {
+  @include reset;
   padding-bottom: 22px;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 40px;
   font-weight: bold;
   line-height: 49px;
-  letter-spacing: 0.5px;
+  letter-spacing: -1.5px;
   text-transform: uppercase;
   color: $blue;
 
@@ -80,8 +80,8 @@
   }
 }
 
-.photo__description {
-  margin: 0;
+.photo__wrapper p {
+  @include reset;
   padding-bottom: 47px;
   font-size: 17px;
   line-height: 29px;
@@ -98,7 +98,7 @@
   }
 }
 
-.photo__description br {
+.photo__wrapper p br {
   display: none;
 
   @media (min-width: $mobile-width) and (max-width: 600px) {

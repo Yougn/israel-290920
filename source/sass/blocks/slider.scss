@@ -2,10 +2,6 @@
   position: relative;
   margin-bottom: 107px;
 
-  &:focus-within {
-    border: 1px solid;
-  }
-
   @media (min-width: $mobile-width) and (max-width: 767px) {
     margin-bottom: 80px;
   }
@@ -41,11 +37,11 @@
   }
 }
 
-.slider__title {
-  @include list-reset;
+.slider-container h2 {
+  @include reset;
   padding-bottom: 5px;
   padding-left: 90px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 40px;
   font-weight: bold;
   line-height: 49px;
@@ -98,7 +94,7 @@
 }
 
 .slide__subtitle {
-  @include list-reset;
+  @include reset;
   padding-top: 40px;
   padding-bottom: 10px;
   font-size: 24px;
@@ -117,7 +113,7 @@
 }
 
 .slide__program {
-  margin: 0;
+  @include reset;
   padding-bottom: 30px;
   color: $black;
   opacity: 0.74;
@@ -142,7 +138,7 @@
 }
 
 .slide__text {
-  margin: 0;
+  @include reset;
   padding-bottom: 17px;
   font-size: 17px;
   line-height: 29px;
@@ -169,7 +165,7 @@
   }
 }
 
-.slide__link {
+.slide__link-details {
   margin: 0;
   font-size: 17px;
   line-height: 25px;
@@ -181,10 +177,6 @@
     opacity: 0.8;
   }
 
-  &:active {
-    opacity: 0.4;
-  }
-
   @media (min-width: $mobile-width) and (max-width: 767px) {
     letter-spacing: -0.5px;
   }
@@ -194,19 +186,19 @@
   position: absolute;
   content: "";
   top: 532px;
-  left: 43%;
-  width: 20px;
+  left: 41%;
+  width: 30px;
   height: 20px;
-  background-image: url("../img/arrow-down.svg");
-  transform: rotate(90deg);
   background-repeat: no-repeat;
   background-color: transparent;
+  opacity: 0.8;
   outline: none;
   cursor: pointer;
+  z-index: 3;
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
   &:active {
@@ -247,19 +239,19 @@
   position: absolute;
   content: "";
   top: 532px;
-  left: 45%;
-  width: 20px;
+  left: 42%;
+  width: 30px;
   height: 20px;
-  background-image: url("../img/arrow-down.svg");
-  transform: rotate(-90deg);
   background-repeat: no-repeat;
   background-color: transparent;
+  opacity: 0.8;
   outline: none;
   cursor: pointer;
+  z-index: 3;
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
   &:active {
@@ -295,7 +287,7 @@
 .swiper-pagination-fraction {
   position: absolute;
   top: 510px;
-  left: -120px;
+  left: -163px;
 
   @media (min-width: $desktop-width) and (max-width: 1100px) {
     top: 485px;
@@ -323,7 +315,6 @@
 }
 
 .slide__social-list {
-  @include list-reset;
   display: flex;
   position: absolute;
   right: -10px;
@@ -346,7 +337,16 @@
   }
 }
 
-.slide__item {
+.slide__link {
   margin: 0 8px;
-  opacity: 0.3;
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
 }

@@ -6,14 +6,13 @@
   }
 }
 
-.video__title {
-  @include list-reset;
+.video h2 {
+  @include reset;
   padding-bottom: 32px;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 40px;
   font-weight: bold;
   line-height: 30px;
-  letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
   color: $blue;
@@ -25,7 +24,7 @@
   }
 }
 
-.video__description {
+.video p {
   max-width: 690px;
   margin: 0 auto;
   font-size: 17px;

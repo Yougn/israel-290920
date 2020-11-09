@@ -49,14 +49,14 @@
   flex-direction: column;
 }
 
-.details__title {
-  @include list-reset;
+.details__wrapper h2 {
+  @include reset;
   padding-bottom: 46px;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 40px;
   font-weight: bold;
   line-height: 49px;
-  letter-spacing: 1.5px;
+  letter-spacing: -1px;
   text-align: left;
   text-transform: uppercase;
   color: $blue;
@@ -66,12 +66,11 @@
     font-size: 32px;
     line-height: 39px;
     text-align: center;
-    letter-spacing: 1px;
   }
 }
 
 .details__city {
-  @include list-reset;
+  @include reset;
   position: relative;
   width: 300px;
   padding-bottom: 40px;
@@ -138,7 +137,7 @@
 }
 
 .details__curator {
-  @include list-reset;
+  @include reset;
   padding-bottom: 15px;
   padding-left: 25px;
   line-height: 22px;
@@ -158,7 +157,7 @@
 }
 
 .details__place {
-  @include list-reset;
+  @include reset;
   padding-left: 23px;
   padding-right: 60px;
   font-size: 13px;
@@ -181,6 +180,7 @@
     flex-direction: column;
     width: 290px;
     margin: 0 auto;
+    padding-bottom: 25px;
   }
 }
 
@@ -227,8 +227,9 @@
 }
 
 .details__description {
-  @include list-reset;
+  @include reset;
   max-width: 480px;
+  padding-top: 5px;
   font-size: 17px;
   line-height: 29px;
   text-align: left;

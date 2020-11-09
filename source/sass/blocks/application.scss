@@ -48,10 +48,10 @@
   }
 }
 
-.application__title {
-  @include list-reset;
+.application__wrapper h2 {
+  @include reset;
   padding-bottom: 17px;
-  font-family: "Montserrat", "Arial", sans-serif;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 28px;
   font-weight: bold;
   line-height: 34px;
@@ -66,8 +66,8 @@
   }
 }
 
-.application__text {
-  @include list-reset;
+.application__wrapper p {
+  @include reset;
   max-width: 360px;
   margin: 0 auto;
   padding-bottom: 30px;

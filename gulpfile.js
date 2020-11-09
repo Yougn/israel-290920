@@ -53,9 +53,7 @@ gulp.task("images", function () {
     .pipe(imagemin([
       imagemin.optipng({ optimizationLevel: 3 }),
       imagemin.jpegtran({ progressive: true }),
-      imagemin.svgo()
     ]))
-
     .pipe(gulp.dest("source/img"));
 
 });
@@ -97,5 +95,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("copy", "css", "sprite", "images", "html"));
 gulp.task("start", gulp.series("build", "server"));

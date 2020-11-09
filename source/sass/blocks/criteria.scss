@@ -1,6 +1,6 @@
 .criteria {
   position: relative;
-  margin-bottom: 210px;
+  margin-bottom: 205px;
 
   @media (min-width: $mobile-width) and (max-width: 599px) {
     margin-bottom: 80px;
@@ -54,14 +54,14 @@
   }
 }
 
-.criteria__title {
-  @include list-reset;
-  padding-bottom: 22px;
-  font-family: "Montserrat", "Arial", sans-serif;
+.criteria__wrapper h2 {
+  @include reset;
+  padding-bottom: 25px;
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
   font-size: 40px;
   font-weight: bold;
   line-height: 49px;
-  letter-spacing: 2px;
+  letter-spacing: -1px;
   text-align: left;
   text-transform: uppercase;
   color: $blue;
@@ -70,14 +70,13 @@
     font-size: 32px;
     line-height: 39px;
     text-align: center;
-    letter-spacing: 1.2px;
   }
 }
 
 .criteria__description {
-  @include list-reset;
+  @include reset;
   max-width: 478px;
-  padding-bottom: 32px;
+  padding-bottom: 35px;
   line-height: 26px;
   text-align: left;
   color: $black;
@@ -93,9 +92,9 @@
 }
 
 .criteria__subtitle {
-  @include list-reset;
+  @include reset;
   padding-right: 25px;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   font-size: 17px;
   font-weight: 500;
   line-height: 29px;
@@ -107,6 +106,14 @@
     padding-bottom: 32px;
     font-size: 16px;
     line-height: 26px;
+  }
+}
+
+.criteria__subtitle br {
+  display: block;
+
+  @media (min-width: $mobile-width) and (max-width: 599px) {
+    display: none;
   }
 }
 

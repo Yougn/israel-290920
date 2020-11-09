@@ -2,12 +2,11 @@
 
 (function () {
 
-  //Реализация модального окна "Заявка принята"
-
   const openModalForm = document.getElementsByTagName('form');
   const modalApplication = document.querySelector('.application');
   const body = document.querySelector('body');
   const ESC_KEY = 27;
+  const MESSAGE_ERROR = 'Ошибка: неверный формат';
 
   const closeForm = function () {
     if (modalApplication.classList.contains('application--show')) {
@@ -49,8 +48,6 @@
   };
 
   window.addEventListener('keydown', closeModalEsc);
-
-  //Реализация модального окна "Заказать звонок"
 
   const openFormCall = document.querySelector('.request-call');
   const modalCall = document.querySelector('.order');
@@ -106,25 +103,118 @@
     body.classList.add('hidden');
   });
 
-  // Валидация формы телефона
-
   const telephone = document.querySelector('#phone');
 
   const validForm = function () {
     let telephoneValue = telephone.value;
+    let telephoneStyle = document.querySelector('.contacts__tel input');
 
     if (!/(^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$)/.test(telephoneValue)) {
-      telephone.setCustomValidity('Ошибка: неверный формат');
-      telephone.style.border = '2px solid red';
+      telephone.setCustomValidity(MESSAGE_ERROR);
+      telephoneStyle.classList.add('phone__error');
     } else {
       telephone.setCustomValidity('');
-      telephone.style.border = '2px solid #484848';
-      telephone.style.opacity = '0.5';
+      telephoneStyle.classList.remove('phone__error');
     };
   };
 
   telephone.addEventListener('input', function () {
     validForm();
+  });
+
+  const accordion = document.getElementsByClassName("accordion__box");
+
+  if (accordion) {
+    for (let i = 0; i < accordion.length; i++) {
+      accordion[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  };
+
+  let slider = document.querySelector('.swiper-container');
+
+  let mySwiper;
+
+  function mobileSlider() {
+    if (window.innerWidth <= 767 && slider.dataset.mobile == 'false') {
+      mySwiper = new Swiper(slider, {
+        slidesPerView: 1,
+        loop: true,
+        slideClass: 'swiper-card',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        }
+      });
+
+      slider.dataset.mobile = 'true';
+    }
+
+    if (window.innerWidth > 767) {
+      slider.dataset.mobile = 'false';
+      if (slider.classList.contains('swiper-container-initialized')) {
+        mySwiper.destroy();
+      }
+    }
+  }
+
+  mobileSlider()
+
+  window.addEventListener('resize', () => {
+    mobileSlider();
+  });
+
+  let tab = function () {
+    let tabNav = document.querySelectorAll('.tabs-nav__item'),
+      tabContent = document.querySelectorAll('.tab'),
+      tabName;
+
+    tabNav.forEach(item => {
+      item.addEventListener('click', selectTabNav)
+    });
+
+    function selectTabNav() {
+      tabNav.forEach(item => {
+        item.classList.remove('is-active');
+      });
+      this.classList.add('is-active');
+      tabName = this.getAttribute('data-tab-name');
+      selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+      tabContent.forEach(item => {
+        item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');
+      })
+    }
+
+  };
+
+  tab();
+
+  const sliderOne = document.querySelector('.slider-container');
+
+  let mySwiperOne = new Swiper(sliderOne, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    slideClass: 'slide',
+    wrapperClass: 'slider-wrap',
+    pagination: {
+      el: '.slider-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 
 })();
