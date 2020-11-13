@@ -1,8 +1,24 @@
 .slider {
   position: relative;
+  max-width: 1084px;
   margin-bottom: 107px;
+  margin-left: 95px;
+
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    max-width: 1084px;
+    margin: 0 auto;
+    margin-bottom: 107px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    max-width: 680px;
+    margin: 0 auto;
+    margin-bottom: 107px;
+  }
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
+    max-width: 320px;
+    margin: 0 auto;
     margin-bottom: 80px;
   }
 }
@@ -24,7 +40,6 @@
   width: 100%;
   max-width: 1084px;
   height: auto;
-  margin-left: 7%;
   overflow: hidden;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width) {
@@ -185,8 +200,8 @@
 .swiper-button-prev {
   position: absolute;
   content: "";
-  top: 532px;
-  left: 41%;
+  top: 536px;
+  left: 465px;
   width: 30px;
   height: 20px;
   background-repeat: no-repeat;
@@ -205,41 +220,22 @@
     opacity: 0.4;
   }
 
-  @media (min-width: $desktop-width) and (max-width: 1100px) {
-    top: 508px;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    top: 435px;
+    left: 95px;
   }
 
-  @media (min-width: 901px) and (max-width: $desktop-width) {
-    top: 540px;
-    left: 65%;
-  }
-
-  @media (min-width: 831px) and (max-width: 900px) {
-    top: 465px;
-    left: 65%;
-  }
-
-  @media (min-width: $tablet-width) and (max-width: 830px) {
-    top: 450px;
-    left: 65%;
-  }
-
-  @media (min-width: 450px) and (max-width: 767px) {
+  @media (min-width: $mobile-width) and (max-width: 767px) {
     top: 415px;
-    left: 50%;
-  }
-
-  @media (min-width: $mobile-width) and (max-width: 449px) {
-    top: 415px;
-    left: 52%;
+    left: 170px;
   }
 }
 
 .swiper-button-next {
   position: absolute;
   content: "";
-  top: 532px;
-  left: 42%;
+  top: 536px;
+  left: 475px;
   width: 30px;
   height: 20px;
   background-repeat: no-repeat;
@@ -258,88 +254,65 @@
     opacity: 0.4;
   }
 
-  @media (min-width: $desktop-width) and (max-width: 1100px) {
-    top: 508px;
-  }
-
-  @media (min-width: 901px) and (max-width: $desktop-width) {
-    top: 540px;
-    left: 69.5%;
-  }
-
-  @media (min-width: 831px) and (max-width: 900px) {
-    top: 465px;
-    left: 69.5%;
-  }
-
-  @media (min-width: $tablet-width) and (max-width: 830px) {
-    top: 450px;
-    left: 69.5%;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    top: 435px;
+    left: 110px;
   }
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     top: 415px;
-    left: 48%;
-    margin-left: 40px;
+    left: 185px;
   }
 }
 
 .swiper-pagination-fraction {
   position: absolute;
-  top: 510px;
-  left: -163px;
+  top: 515px;
+  left: -118px;
+  z-index: 0;
 
-  @media (min-width: $desktop-width) and (max-width: 1100px) {
-    top: 485px;
-  }
-
-  @media (min-width: 901px) and (max-width: 1023px) {
-    top: 515px;
-    left: 26%;
-  }
-
-  @media (min-width: 831px) and (max-width: 900px) {
-    top: 440px;
-    left: 26%;
-  }
-
-  @media (min-width: $tablet-width) and (max-width: 830px) {
-    top: 430px;
-    left: 26%;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    top: 370px;
+    left: -220px;
   }
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     top: 395px;
-    left: -9%;
+    left: -30px;
   }
 }
 
 .slide__social-list {
   display: flex;
   position: absolute;
-  right: -10px;
-  bottom: 0;
+  top: 458px;
+  right: -5px;
 
-  @media (min-width: $desktop-width) and (max-width: 1050px) {
-    bottom: 10px;
+  @media (min-width: 1025px) and (max-width: 1100px) {
+    top: 385px;
+    right: 10px;
   }
 
-  @media (min-width: $tablet-width) and (max-width: 1200px) {
-    right: 10px;
-    bottom: 0;
+  @media (min-width: 901px) and (max-width: $desktop-width) {
+    top: 460px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 900px) {
+    top: 375px;
   }
 
   @media (min-width: $mobile-width) and (max-width: 767px) {
     position: relative;
-    bottom: 0;
-    left: -12px;
-    padding-top: 14px;
+    top: 5px;
+    left: 0;
+    padding-top: 15px;
   }
 }
 
 .slide__link {
-  margin: 0 8px;
+  margin: 0 6px;
   opacity: 0.4;
+  z-index: 2;
 
   &:hover,
   &:focus {

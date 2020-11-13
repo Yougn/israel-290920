@@ -95,12 +95,12 @@
 
   &:hover,
   &:focus {
-    color: rgba($black, 0.74);
+    color: rgba($yellow, 1);
   }
 
-  &:active {
-    color: rgba($black, 0.2);
-  }
+  // &:active {
+  //   color: rgba($yellow, 1);
+  // }
 
   &--organizer {
     padding-top: 0;

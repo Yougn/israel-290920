@@ -122,6 +122,10 @@
   }
 }
 
+.swiper-pagination {
+  display: none;
+}
+
 @media (min-width: $mobile-width) and (max-width: 767px) {
   .swiper h2 {
     padding-bottom: 22px;
