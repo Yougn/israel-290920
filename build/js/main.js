@@ -54,6 +54,7 @@
   const form = modalCall.querySelector('form');
   const btn = document.querySelector('#btn');
   const checkbox = document.querySelector('#agreement');
+  const login = document.querySelector('#login');
 
   checkbox.addEventListener('click', (evt) => {
     if (evt.target.checked) btn.removeAttribute('disabled');
@@ -92,6 +93,7 @@
       evt.preventDefault();
       modalCall.classList.add('order--show');
       checkbox.focus();
+      login.focus();
       body.classList.add('hidden');
     });
   };
@@ -111,10 +113,10 @@
 
     if (!/(^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$)/.test(telephoneValue)) {
       telephone.setCustomValidity(MESSAGE_ERROR);
-      telephoneStyle.classList.add('phone__error');
+      telephoneStyle.style.border = '2px solid red';
     } else {
       telephone.setCustomValidity('');
-      telephoneStyle.classList.remove('phone__error');
+      telephoneStyle.style.border = '2px solid  #e5e5e5';
     };
   };
 
@@ -135,7 +137,7 @@
           panel.style.maxHeight = panel.scrollHeight + "px";
         }
       });
-    }
+    };
   };
 
   let slider = document.querySelector('.swiper-container');

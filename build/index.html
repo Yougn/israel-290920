@@ -7,10 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Израйль</title>
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="preload" href="fonts/FiraSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/FiraSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/FiraSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin="">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="js/picturefill.js" async=""></script>
+
 </head>
 
 <body>
@@ -333,7 +335,7 @@
       </div>
     </section>
 
-    <section class="slider">
+    <section class="slider" tabindex="0">
       <div class="slider-container">
         <h2 class="slider__title">ОТЗЫВЫ</h2>
         <div class="slider-wrap">
@@ -363,19 +365,19 @@
                   удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки
                   всей программой в разные уголки страны.
                 </p>
-                <a class="slide__link-details" href="#">Читать подробнее</a>
+                <a class="slide__link-details" href="#" tabindex="-1">Читать подробнее</a>
                 <div class="slide__social-list">
-                  <a class="slide__link slide__link--facebook" href="#">
+                  <a class="slide__link slide__link--facebook" href="#" tabindex="-1">
                     <svg class="slide__svg slide__svg--fb" width="24" height="24">
                       <use href="img/sprite.svg#icon-fb"></use>
                     </svg>
                   </a>
-                  <a class="slide__link slide__link--twitter" href="#">
+                  <a class="slide__link slide__link--twitter" href="#" tabindex="-1">
                     <svg class="slide__svg slide__svg--twitter" width="24" height="24">
                       <use href="img/sprite.svg#icon-tw"></use>
                     </svg>
                   </a>
-                  <a class="slide__link slide__link--insta" href="#">
+                  <a class="slide__link slide__link--insta" href="#" tabindex="-1">
                     <svg class="slide__svg slide__svg--insta" width="24" height="24">
                       <use href="img/sprite.svg#icon-insta"></use>
                     </svg>
@@ -384,7 +386,7 @@
               </div>
             </div>
           </div>
-          <div class="slide">
+          <div class="slide" tabindex="-1">
             <div class="slide__row">
               <picture>
                 <source type="image/webp" media="(min-width: 768px)" srcset="img/girl.webp 1x, img/girl@2x.webp 2x">
@@ -410,19 +412,19 @@
                   удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки
                   всей программой в разные уголки страны.
                 </p>
-                <a class="slide__link-details" href="#">Читать подробнее</a>
+                <a class="slide__link-details" href="#" tabindex="-1">Читать подробнее</a>
                 <div class="slide__social-list">
-                  <a class="slide__link slide__link--facebook" href="#">
+                  <a class="slide__link slide__link--facebook" href="#" tabindex="-1">
                     <svg class="slide__svg slide__svg--fb" width="24" height="24">
                       <use href="img/sprite.svg#icon-fb"></use>
                     </svg>
                   </a>
-                  <a class="slide__link slide__link--twitter" href="#">
+                  <a class="slide__link slide__link--twitter" href="#" tabindex="-1">
                     <svg class="slide__svg slide__svg--twitter" width="24" height="24">
                       <use href="img/sprite.svg#icon-tw"></use>
                     </svg>
                   </a>
-                  <a class="slide__link slide__link--insta" href="#">
+                  <a class="slide__link slide__link--insta" href="#" tabindex="-1">
                     <svg class="slide__svg slide__svg--insta" width="24" height="24">
                       <use href="img/sprite.svg#icon-insta"></use>
                     </svg>
@@ -434,8 +436,8 @@
         </div>
       </div>
       <div class="slider-pagination"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev" tabindex="2"></div>
+      <div class="swiper-button-next" tabindex="3"></div>
     </section>
 
     <section class="details">
@@ -511,7 +513,7 @@
             </div>
             <div class="contacts__tel">
               <label for="phone" class="visually-hidden">ТЕЛЕФОН</label>
-              <input id="phone" type="tel" name="telephone" placeholder="+7 (923) 41" required="">
+              <input id="phone" type="tel" name="telephone" placeholder="ТЕЛЕФОН" required="">
             </div>
             <button class="btn contacts__btn call-me" type="submit" aria-label="Кнопка оправить заказ">
               ПЕРЕЗВОНИТЕ МНЕ
@@ -614,6 +616,7 @@
     </form>
   </section>
 
+  <script src="js/picturefill.js" async=""></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/main.js"></script>
 </body>

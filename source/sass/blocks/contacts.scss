@@ -109,7 +109,7 @@
 
   &:focus,
   &:hover {
-    border: 2px solid $yellow;
+    border: 2px solid $bg-color;
   }
 
   &:active {
@@ -139,12 +139,7 @@
 }
 
 .contacts__tel input {
-  border: 2px solid $yellow;
-
-  &:focus,
-  &:hover .phone__error {
-    border: 2px solid red;
-  }
+  border: 2px solid $bg-color;
 }
 
 .contacts__btn {
